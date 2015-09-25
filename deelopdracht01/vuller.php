@@ -3,8 +3,9 @@ $i = 0;
 $servname = "localhost";
 $username = "user";
 $passwd = "pass";
+$dbname = "wordpress"
 
-$conn = new mysqli($servname, $username, $passwd);
+$conn = new mysqli($servname, $username, $passwd, $dbname);
 
 if($conn->connect_error) {
   die("DERP");
@@ -30,6 +31,6 @@ else {
    echo "DERPAHERP<br>".$conn->error;
 }
 
-$conn->close();
 }
+$conn->close();
 ?>
