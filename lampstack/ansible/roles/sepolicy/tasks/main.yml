@@ -1,5 +1,5 @@
-# roles/sepolicy/tasks/main.yml
-# Install an SELinux policy on the server
+#roles/sepolicy/tasks/main.yml
+#install an SELinux policy on the server
 ---
 
 - name: Check whether policy is already installed

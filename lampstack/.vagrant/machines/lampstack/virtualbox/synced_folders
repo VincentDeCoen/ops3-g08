@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/html":{"owner":"root","group":"root","mount_options":["dmode=0755","fmode=0644"],"guestpath":"/var/www/html","hostpath":"/home/robbe/Documents/School/Project/ops3-g08/lampstack/www","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/robbe/Documents/School/Project/ops3-g08/lampstack","disabled":false}}}

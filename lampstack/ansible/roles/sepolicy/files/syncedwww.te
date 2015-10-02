@@ -16,4 +16,3 @@ require {
 allow httpd_t vmblock_t:dir { getattr search };
 
 allow httpd_t vmblock_t:file { read getattr open };
-
