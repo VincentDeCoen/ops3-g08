@@ -5,7 +5,7 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| student1 |       |           |
+| Vincent De Coen |       |           |
 | student2 |       |           |
 | student3 |       |           |
 | student4 |       |           |
@@ -21,7 +21,7 @@
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
-### Student 1
+### Vincent De Coen
 
 * ...
 
