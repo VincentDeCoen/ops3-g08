@@ -1,4 +1,4 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 03
 
 * Groep: g08
 * Datum: 09/10/15
@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-![Afbeelding huidige toestand Kanban-bord(en) invoegen](weekrapport/media/w03/kanbanteam.png "huboard team")
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w03/kanbanteam.png "huboard team")
 
 * ...
 * ...
 
-![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](weekrapport/media/w03/togglteam.png "toggl team")
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w03/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -45,7 +45,7 @@
 * LAMP-stack opgezet met fakerpress (plugin) om content te genereren
 * Lectuur over monitoring cf. bronnen opgave linux
 
-![Afbeelding individueel rapport tijdregistratie](weekrapport/media/w03/birgit.png "tijdregistratie individueel birgit")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w03/birgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
