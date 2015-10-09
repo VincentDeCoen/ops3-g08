@@ -11,3 +11,6 @@
 # Hidden Vagrant-directory
 .vagrant
 lampstack/.vagrant
+
+# Ignore role directories from Ansible Galaxy (user.role notation)
+ansible/roles/*.*
