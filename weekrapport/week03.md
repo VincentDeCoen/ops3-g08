@@ -1,7 +1,7 @@
 # Voortgangsrapport week nn
 
 * Groep: g08
-* Datum:
+* Datum: 09/10/15
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](weekrapport/media/w03/kanbanteam.png "huboard team")
 
 * ...
 * ...
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](weekrapport/media/w03/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -42,9 +42,10 @@
 
 ### Birgit Croux
 
-* ...
+* LAMP-stack opgezet met fakerpress (plugin) om content te genereren
+* Lectuur over monitoring cf. bronnen opgave linux
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](weekrapport/media/w03/birgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
@@ -60,6 +61,9 @@
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux
+  * collectd opzetten en verkennen
+  * powershell virtual academy
+
 ### Josey De Smet
 
 ## Waar hebben jullie nog problemen mee?
