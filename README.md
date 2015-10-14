@@ -4,11 +4,11 @@
 
 | Naam     | GitHub gebruikersnaam                   |
 | :---     | :---                                    |
-| student1 | [Vincent De Coen](https://github.com/VincentDeCoen) |
-| student2 | [Ruben Piro](https://github.com/student2) |
-| student3 | [Robbe Van Daele](https://github.com/RvanDaele) |
-| student4 | [Birgit Croux](https://github.com/birgitcroux) |
-| student5 | [Josey De Smet](https://github.com/joseydesmet) |
+| Vincent De Coen | [VincentDeCoen](https://github.com/VincentDeCoen) |
+| Ruben Piro | [RubenPiro](https://github.com/RubenPiro) |
+| Robbe Van Daele | [RvanDaele](https://github.com/RvanDaele) |
+| Birgitta Croux | [birgitcroux](https://github.com/birgitcroux) |
+| Josey De Smet | [joseydesmet](https://github.com/joseydesmet) |
 
 ## Gebruikte tools
 
