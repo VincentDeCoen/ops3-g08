@@ -42,7 +42,9 @@
 
 ### Birgit Croux
 
-* ...
+* Aanzet lastenboek linux: deeltaken en deliverables aangevuld
+* Issues aangemaakt voor opdracht linux
+* Tevergeefs geprobeerd om probleem met Wordpress-installatie op te lossen (login na install faalt)
 
 [Afbeelding individueel rapport tijdregistratie]
 
