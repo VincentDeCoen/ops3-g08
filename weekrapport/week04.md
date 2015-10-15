@@ -1,4 +1,4 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 04
 
 * Groep: g08
 * Datum:
@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w04/kanbanteam.png "huboard team")
 
 * ...
 * ...
@@ -44,9 +44,9 @@
 
 * Aanzet lastenboek linux: deeltaken en deliverables aangevuld
 * Issues aangemaakt voor opdracht linux
-* Tevergeefs geprobeerd om probleem met Wordpress-installatie op te lossen (login na install faalt)
+* Tevergeefs geprobeerd om probleem met Wordpress-installatie op te lossen (login na install faalt - importeren bestaande db faalt ook)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w04/birgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
