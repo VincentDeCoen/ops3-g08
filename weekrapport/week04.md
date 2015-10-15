@@ -62,6 +62,11 @@
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux
+
+* configuratie collectd
+* evt. al testscenario's proberen uit te werken
+* inwerken in powershell
+
 ### Josey De Smet
 
 ## Waar hebben jullie nog problemen mee?
