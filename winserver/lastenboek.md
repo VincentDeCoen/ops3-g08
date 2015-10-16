@@ -1,7 +1,7 @@
 ## Lastenboek Taak 1: (titel)
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Ruben Piro`
+* Verantwoordelijke testen: `Birgit Croux`
 
 ### Deliverables
 
