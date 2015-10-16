@@ -9,3 +9,6 @@
     - bertvv.mariadb
     - bertvv.wordpress
     - phpmyadmin
+  post_tasks:
+    - name: import wordpress database
+      mysql_db: name=wordpress_db state=import target=/vagrant/ansible/common/files/wpdump.sql

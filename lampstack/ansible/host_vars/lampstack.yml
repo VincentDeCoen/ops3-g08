@@ -17,16 +17,19 @@ el7_firewall_allow_services:
 
 httpd_scripting: 'php'
 
+# mariadb
+mariadb_root_password: yagnolhu9OlOthUl
 mariadb_databases:
-  - wordpress
-
+  - wordpress_db
 mariadb_users:
-  - name: wordpressusr
-    password: BulpashCod
-    priv: 'wordpress.*:ALL'
+  - name: wordpress_usr
+    password: 1OjejAfPod
+    priv: wordpress_db.*:ALL
 
-mariadb_root_password: Teilvadci
-
-wordpress_database: wordpress
-wordpress_user: wordpressusr
-wordpress_password: BulpashCod
+# wordpress
+wordpress_database: wordpress_db
+wordpress_user: wordpress_usr
+wordpress_password: 1OjejAfPod
+wordpress_themes:
+  - name: xcel
+    version: 1.0.9
