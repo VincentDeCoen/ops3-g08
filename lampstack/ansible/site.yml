@@ -11,4 +11,4 @@
     - phpmyadmin
   post_tasks:
     - name: import wordpress database
-      mysql_db: name=wordpress_db state=import target=/vagrant/ansible/common/files/wpdump.sql
+      mysql_db: name=wordpress_db state=import target=/vagrant/ansible/roles/common/files/wpdump.sql
