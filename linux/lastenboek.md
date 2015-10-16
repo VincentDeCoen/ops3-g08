@@ -1,7 +1,7 @@
 ## Lastenboek Taak 1: Linux
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Birgit Croux`
+* Verantwoordelijke testen: `Robbe Van Daele`
 
 ### Deliverables
 
@@ -39,7 +39,7 @@
 
 ### Kanban-bord
 
-(schermafbeeldingen van de toestand van het Kanban-bord invoegen elke week voor de samenkomst met de begeleider, tot oplevering van de opdracht)
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w04/kanbanteam.png "huboard team")
 
 ### Tijdbesteding
 
