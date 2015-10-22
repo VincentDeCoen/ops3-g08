@@ -26,7 +26,7 @@ A few features:
 
 ### PowerShell: namespace navigation through providers
 
-A Windows PowerShell provider is an abstraction layer that lets you navigate different types of data stores (filesystem, registry, SQL Server, ...) in a unified way.
+A Windows PowerShell provider is an abstraction layer that lets you navigate different types of data stores (filesystem, registry, SQL Server, ...) in a unified way. [In short](http://www.powershellpro.com/powershell-tutorial-introduction/powershell-providers/): this lets you use the same cmdlets you use for files and folders in different environments.
 
 ### PowerShell: composable commands - scripting everywhere
 
@@ -46,6 +46,7 @@ Common discovery commands:
 * `Get-Command WILDCARD` = find all commands that match WILDCARD pattern (eg. \*process\* -> all commands that contain the word 'process')
 * `Get-Help COMMAND` = get information on function of COMMAND
 * `Get-Member` = retrieve information about properties and methods supported by an object
+
 
 ## Fundamentals 1: The PowerShell interactive shell
 

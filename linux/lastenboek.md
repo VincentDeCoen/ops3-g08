@@ -39,7 +39,7 @@
 
 ### Kanban-bord
 
-![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w04/kanbanteam.png "huboard team")
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w05/kanbanlinux.png "huboard team")
 
 ### Tijdbesteding
 

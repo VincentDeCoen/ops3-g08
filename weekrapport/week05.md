@@ -1,7 +1,7 @@
 # Voortgangsrapport week nn
 
 * Groep: g08
-* Datum:
+* Datum: 23/10/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w05/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Verdergewerkt aan opzetten monitoring server
+* Gewerkt aan leesopdracht PowerShell
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w05/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -42,9 +42,12 @@
 
 ### Birgit Croux
 
-* ...
+* Collectd: rol bertvv.collectd toepassen
+* Graphite: opzoeken informatie over opzetten van Graphite met collectd
+* Taurus: kort onderzoek over haalbaarheid als load-testing tool (verworpen)
+* PowerShell: gelezen in OReilly Cookbook + samenvatting
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w05/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
@@ -60,6 +63,11 @@
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux
+
+* Graphite + collectd opzetten (of dit proberen)
+* JMeter verkennen
+* Verdergaan met studie PowerShell
+
 ### Josey De Smet
 
 ## Waar hebben jullie nog problemen mee?
@@ -74,7 +82,7 @@
 Powershell:
 
 * parallel lezen van boeken verdelen in sprints (overlap vermijden)
-* testen: iemand anders leest hetzelfde hoofdstuk en evalueert de samenvatting
+* testen: iemand anders evalueert de samenvatting
 * cheat sheets (handige commando's)
 * script folder (met verdere onderverdeling vlg taak/onderwerp)
 
