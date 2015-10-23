@@ -1,7 +1,7 @@
 ## Lastenboek Taak 1: (titel)
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Josey De Smet`
+* Verantwoordelijke testen: `Birgitta Croux`
 
 ### Deliverables
 
@@ -19,9 +19,10 @@
 
 | Student  | Geschat | Gerealiseerd |
 | :---     |    ---: |         ---: |
-| student1 |         |              |
-| student2 |         |              |
-| student3 |         |              |
-| student4 |         |              |
+| Vincent De Coen |         |              |
+| Ruben Piro |          |              |
+| Robbe Van Daele |          |              |
+| Birgitta Croux |         |              |
+| Josey De Smet|         |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
