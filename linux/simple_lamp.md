@@ -34,3 +34,26 @@ Om snel een LAMP-stack met werkende WordPress-applicatie, een blog opgevuld met 
           INSERT INTO `wp_options` VALUES (1,'siteurl','http://192.168.56.77/wordpress','yes'),(2,'home','http://192.168.56.77/wordpress','yes') ...
 
 * om de oorspronkelijke site op te vullen is gebruikt gemaakt van de WordPress-plugin Fakerpress.
+
+## Collectd
+
+Lampstack en monitoring zijn geconfigureerd voor het opzetten van collectd. Lampstack als client, monitoring als server. Hiervoor gebruiken we de rol bertvv.collectd uit Ansible Galaxy.
+
+* Server 'monitoring' is toegevoegd in vagrant_hosts.yml  
+
+        - name: monitoring
+          ip: 192.168.56.70
+
+* Rol bertvv.collectd is voor beide servers toegevoegd aan site.yml
+
+* Monitoring is ingesteld als server voor collectd (client lampstack stuurt collectd-data via het netwerk naar de server). Dit gebeurt in group_vars/all.yml.
+
+        # collectd server address
+        collectd_server: 192.168.56.70
+
+* De lampstack laat verkeer door op de poort(en) die collectd-plugin network gebruikt (group_vars/all.yml)  
+
+          # allow traffic on collectd network plugin port
+          el7_firewall_allow_ports:
+                - 25826/udp
+                - 25827/udp
