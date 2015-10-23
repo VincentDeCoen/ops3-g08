@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |   X    |           |
+| Ruben Piro |  X     |           |
+| Robbe Van Daele |   X    |           |
+| Birgit Croux |    X   |           |
+| Josey De Smet |   X   |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -92,12 +92,27 @@ Powershell:
 ### Birgit Croux
 ### Josey De Smet
 
-## Feedback analyseluik
+## Feedback Lector Windows
 
 ### Algemeen
-
+* Birgit heeft goed gewerkt aan Windows Powershell opdracht, volgt de afspraken en schreef een eerste samenvatting
+* Andere groepsleden krijgen verwittiging
+  - volg de afspraken!
+  - geen tijdsregistratie
+  - geen documentatie van Powershell
+  - geen beschrijving van werk in weekrapport
+* Paar kleine tips
+  - Kwaliteit waarborgen door 
+    - teksten te laten nakijken door andere teamlid
+    - testen beter voor te bereiden (afspreken wie wat wanneer zal testen en toevoegen aan scrum bord)
+    - sneller te starten met testen (niet enkel o phet einde van de rit) en sneller inspelen op fouten
+  - Scripts uit boeken en online repos bijhouden in folderstructuur (testen en bij onduidelijk commandos commentaar
 ### Vincent De Coen
+* Waarschuwing
 ### Ruben Piro
+* Waarschuwing
 ### Robbe Van Daele
+* Waarschuwing
 ### Birgit Croux
 ### Josey De Smet
+* Waarschuwing
