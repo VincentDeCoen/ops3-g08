@@ -50,7 +50,7 @@ Common discovery commands:
 
 ## Fundamentals 1: The PowerShell interactive shell
 
-### Run programs, scripts, batch files
+### Running programs, scripts, batch files
 
 ##### Command name
 
@@ -80,15 +80,15 @@ Dynamic arguments (eg. result of user input): store them in a variable and pass 
 
 Careful when using cmdlet Invoke-Expression: this treats the entire string you give it as a complete PowerShell script! Eg. filenames are allowed to contain ';' but in a script this is treated as a new line.
 
-### Run PowerShell commands
+### Running PowerShell commands (cmdlets)
 
-##### Execute
+##### Executing commands
 
 To execute a cmdlet: type its name at the prompt.
 
 Command name syntax is predictable: Verb-Noun, where Verb describes the action the command takes and Noun describes what it acts on.
 
-##### Find information
+##### Finding information
 
 Finding cmdlets: Get-Command
 * summary information: `Get-Command COMMANDNAME`
@@ -113,3 +113,47 @@ Finding information about topics: `Get-Help KEYWORD`
 Updating help: `Update-Help`
 
 Out of the box: help contains only information built into commands themselves (name, syntax, parameters, default values). To get more, you have to run Update-Help (downloads content from the Internet by default, or a specified path if you use the -SourcePath parameter).
+
+### Running cmd.exe (native) commands
+
+##### Command arguments
+
+PowerShell cmdlets parse arguments in a consistent manner. Native executables may be more varied and unpredictable in their parameter parsing.
+
+In addition, PowerShell treats some characters as language features (similar to eg. bash). Enclosing them in single quotes makes PS accept these characters as written.
+
+| Special character | Meaning |
+|  -:- | :--- |
+| " " | Quoted text |
+| # | Comment |
+| $ | Variable |
+| & | Reserved for future use |
+| () | Subexpressions |
+| ; | Statement separator |
+| {} | Script block |
+| \|  Pipeline separator |
+| ` (backtick) | Escape character |
+
+
+If you get errors passing arguments, you may try to:
+
+* Enclose command arguments in single quotes (prevent them from being interpreted by PS)
+* Replace single quotes in the command with 2 single quotes
+* Use the verbatim argument syntax: `--%`. This prevents PS from interpreting any of the remaining characters on the line. cmd.exe-style environment variables (eg. %host%) are accepted.
+* Review how PS is processing the arguments: `Trace-Command NativeCommandParameterBinder { COMMAND + ARGUMENTS } -PsHost`. This will provide a list of successive command arguments as PS sees them.
+
+### Supplying default values for parameters
+//TODO (low priority)
+
+### Invoking Long-Running or Background commands
+
+Invoke the command as a `Job`.
+
+* Start-Job: launch a background job .
+  eg. `PS > Start-Job { while($true) { Get-Random; Start-Sleep 5 } } -Name Sleeper` (you can use this name when invoking other job-related commands)
+* parameter `-AsJob` available in many cmdlets
+* Get-Job: get all jobs associated with current session.
+* Wait-Job: wait for a job until it produces output
+* Receive-Job: retrieve any output generated since last call to Receive-Job
+* Stop-Job: stops a job.
+* Remove-Job: remove a job from the list of active jobs.
