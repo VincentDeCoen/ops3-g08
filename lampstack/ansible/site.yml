@@ -2,13 +2,13 @@
 ---
 
 # test: disable firewall
-- hosts: all
-  sudo: true
-  tasks:
-    - name: Ensure firewall is not running
-      service:
-        name: firewalld
-        state: stopped
+#- hosts: all
+#  sudo: true
+#  tasks:
+#    - name: Ensure firewall is not running
+#      service:
+#        name: firewalld
+#        state: stopped
 
 - hosts: lampstack
   sudo: true
@@ -20,12 +20,16 @@
     - bertvv.mariadb
     - bertvv.wordpress
     - phpmyadmin
-
   post_tasks:
     - name: import wordpress database
       mysql_db: name=wordpress_db state=import target=/vagrant/ansible/roles/common/files/wpdump.sql
 
 - hosts: monitoring
   sudo: true
+  tasks:
+    - name: Ensure firewall is not running
+      service:
+        name: firewalld
+        state: stopped
   roles:
     - bertvv.collectd

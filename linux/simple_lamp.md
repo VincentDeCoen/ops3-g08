@@ -3,6 +3,8 @@
 Om snel een LAMP-stack met werkende WordPress-applicatie, een blog opgevuld met posts en comments, te verkrijgen:
 `vagrant up lampstack` vanuit de directory /lampstack in deze repository.
 
+De blog is te bezoeken op 192.168.56.77/wordpress/ (wanneer de server draait, uiteraard).
+
 * ansible/site.yml bevat een post task die na de provisionering ansible/roles/common/files/wpdump.sql importeert.  
 
           post_tasks:
@@ -38,6 +40,8 @@ Om snel een LAMP-stack met werkende WordPress-applicatie, een blog opgevuld met 
 ## Collectd
 
 Lampstack en monitoring zijn geconfigureerd voor het opzetten van collectd. Lampstack als client, monitoring als server. Hiervoor gebruiken we de rol bertvv.collectd uit Ansible Galaxy.
+
+Een eenvoudige interface om de verzamelde stats te bekijken is (wanneer de server draait) te zien op 192.168.56.70/collectd/ (**inclusief de laatste slash**, anders krijg je een 404).
 
 * Server 'monitoring' is toegevoegd in vagrant_hosts.yml  
 

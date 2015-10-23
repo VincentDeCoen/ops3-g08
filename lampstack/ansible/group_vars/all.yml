@@ -24,4 +24,3 @@ el7_firewall_allow_services:
 
 # collectd server address
 collectd_server: 192.168.56.70
-collectd_web_enabled: false
