@@ -1,7 +1,7 @@
-## Lastenboek Taak 1: (titel)
+## Lastenboek Taak 3: Automatisatie Windows Server
 
 * Verantwoordelijke uitvoering: `Ruben Piro`
-* Verantwoordelijke testen: `Birgit Croux`
+* Verantwoordelijke testen: `Vincent De Coen`
 
 ### Deliverables
 
@@ -19,9 +19,10 @@
 
 | Student  | Geschat | Gerealiseerd |
 | :---     |    ---: |         ---: |
-| student1 |         |              |
-| student2 |         |              |
-| student3 |         |              |
-| student4 |         |              |
+| Vincent De Coen |         |              |
+| Ruben Piro |          |              |
+| Robbe Van Daele |          |              |
+| Birgitta Croux |         |              |
+| Josey De Smet|         |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
