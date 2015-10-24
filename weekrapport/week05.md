@@ -67,6 +67,7 @@
 * Powershell leesopdracht verder afwerken.
 * Powershell Microsoft Virtual Academy volledig uitkijken met bijbehorende cheat sheets.
 * Verder werken aan de Windows Server opdracht met AD, DNS en DHCP functies.
+* Documenteren Powershell boek + documenteren Windows Server scripts
 
 ### Robbe Van Daele
 
