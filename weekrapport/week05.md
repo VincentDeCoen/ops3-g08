@@ -1,13 +1,13 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 05
 
-* Groep: g08
+* Groep: 08
 * Datum: 23/10/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
 | Vincent De Coen |   X    |           |
 | Ruben Piro |  X     |           |
-| Robbe Van Daele |   X    |           |
+| Robbe Van Daele |       |      ziek     |
 | Birgit Croux |    X   |           |
 | Josey De Smet |   X   |            |
 
@@ -30,7 +30,9 @@
 
 ### Ruben Piro
 
-* ...
+* Powershell: leesopdracht
+* Powershell: Microsoft Virtual Academy lessen 2,3,4 bekeken + kleine cheatsheet
+* Windows Server: Active Directory scripting
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -60,8 +62,14 @@
 
 ### Algemeen
 ### Vincent De Coen
+
 ### Ruben Piro
+* Powershell leesopdracht verder afwerken.
+* Powershell Microsoft Virtual Academy volledig uitkijken met bijbehorende cheat sheets.
+* Verder werken aan de Windows Server opdracht met AD, DNS en DHCP functies.
+
 ### Robbe Van Daele
+
 ### Birgit Croux
 
 * Graphite + collectd opzetten (of dit proberen)

@@ -1,14 +1,15 @@
-# Voortgangsrapport week 02
+# Voortgangsrapport week 06
 
-* Groep: 08
-* Datum: 02/10/15
+* Groep: g08
+* Datum: 30/10/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
 | Vincent De Coen |       |           |
-| Ruben Piro |  ja     |    /       |
-| student3 |       |           |
-| student4 |       |           |
+| Ruben Piro |       |           |
+| Robbe Van Daele |       |           |
+| Birgit Croux |       |           |
+| Josey De Smet |      |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -27,13 +28,13 @@
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 2
+### Ruben Piro
 
 * ...
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 3
+### Robbe Van Daele
 
 * ...
 
@@ -41,19 +42,25 @@
 
 ### Birgit Croux
 
-Niets gerealiseerd voor project iii wegens problemen met multiboot windows-linux op mijn thuissysteem.
+* ...
 
 [Afbeelding individueel rapport tijdregistratie]
+
+### Josey De Smet
+
+* ...
+
+[Afbeelding individueel rapport tijdregistratie]
+
 
 ## Wat plan je volgende week te doen?
 
 ### Algemeen
-### Student 1
-### Student 2
-### Student 3
+### Vincent De Coen
+### Ruben Piro
+### Robbe Van Daele
 ### Birgit Croux
-
-Windows: beginnen met de opgave powershell 
+### Josey De Smet
 
 ## Waar hebben jullie nog problemen mee?
 
@@ -64,16 +71,18 @@ Windows: beginnen met de opgave powershell
 
 ### Algemeen
 
-### Student 1
-### Student 2
-### Student 3
-### Student 4
+### Vincent De Coen
+### Ruben Piro
+### Robbe Van Daele
+### Birgit Croux
+### Josey De Smet
 
 ## Feedback analyseluik
 
 ### Algemeen
 
-### Student 1
-### Student 2
-### Student 3
-### Student 4
+### Vincent De Coen
+### Ruben Piro
+### Robbe Van Daele
+### Birgit Croux
+### Josey De Smet
