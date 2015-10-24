@@ -32,7 +32,7 @@
 
 * ...
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w04/week04Ruben "tijdregistratie individueel ruben")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w04/week04Ruben.PNG "tijdregistratie individueel ruben")
 
 ### Robbe Van Daele
 

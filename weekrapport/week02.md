@@ -31,7 +31,7 @@
 
 * ...
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w02/week02Ruben "tijdregistratie individueel ruben")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w02/week02Ruben.PNG "tijdregistratie individueel ruben")
 
 ### Student 3
 
