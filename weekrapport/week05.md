@@ -34,7 +34,7 @@
 * Powershell: Microsoft Virtual Academy lessen 2,3,4 bekeken + kleine cheatsheet
 * Windows Server: Active Directory scripting
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w05/week05Ruben "tijdregistratie individueel ruben")
 
 ### Robbe Van Daele
 

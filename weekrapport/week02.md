@@ -27,11 +27,11 @@
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 2
+### Ruben Piro
 
 * ...
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w02/week02Ruben "tijdregistratie individueel ruben")
 
 ### Student 3
 
