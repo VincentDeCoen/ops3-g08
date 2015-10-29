@@ -27,7 +27,7 @@
 * Microsoft Virtual Academy beginnen kijken
 * Boek Powershell gekozen. 
 
-[Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w05/week05Vincent.PNG "tijdregistratie individueel Vincent")
+![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w05/week05Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
