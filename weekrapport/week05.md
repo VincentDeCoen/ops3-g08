@@ -24,9 +24,10 @@
 
 ### Vincent De Coen
 
-* ...
+* Microsoft Virtual Academy beginnen kijken
+* Boek Powershell gekozen. 
 
-[Afbeelding individueel rapport tijdregistratie]
+[Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w05/week05Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
@@ -62,6 +63,9 @@
 
 ### Algemeen
 ### Vincent De Coen
+* Microsoft virtual academy verder bekijken
+* Boek powershell lezen
+* Windows Server opdracht
 
 ### Ruben Piro
 * Powershell leesopdracht verder afwerken.
