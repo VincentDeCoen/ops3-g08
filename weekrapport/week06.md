@@ -32,9 +32,12 @@
 
 ### Ruben Piro
 
-* ...
+* Powershell: Microsoft Virtual Academy module 5 - 6 - 7.
+* Powershell: Powershell 3.0 First Steps Chapter 12 (Functions).
+* Powershell: Powershell in practice: Getting started + Working with people (user accounts) [nog niet gedocumenteerd].
+* Windows Server: beginscript(AD DHCP DNS zonder functies) + functies AD en DHCP + kleine cheatsheet
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w06/week06Ruben.PNG "tijdregistratie individueel Ruben")
 
 ### Robbe Van Daele
 
@@ -58,11 +61,17 @@
 ## Wat plan je volgende week te doen?
 
 ### Algemeen
+
 ### Vincent De Coen
 * Microsoft Virtual Academy uitkijken
 * Powershell boek verder lezen
 * Powershell scripting AD (testen)
+
 ### Ruben Piro
+*Microsoft Virtual Academy module 8 en 9
+*Powershell 3.0 First Steps verder lezen (conclusie: veel beter boek gevonden als Manning powershell in practice)
+*Werken aan het powershell script met de functies die moeten vervolledigd worden.
+
 ### Robbe Van Daele
 ### Birgit Croux
 ### Josey De Smet
