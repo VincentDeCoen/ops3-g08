@@ -17,8 +17,8 @@
 
 ![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w06/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Gewerkt aan automatisering AD
+* Gewerkt aan installatie en configuratie Graphite
 
 ![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w06/togglteam.png "toggl team")
 
@@ -32,9 +32,12 @@
 
 ### Ruben Piro
 
-* ...
+* Powershell: Microsoft Virtual Academy module 5 - 6 - 7.
+* Powershell: Powershell 3.0 First Steps Chapter 12 (Functions).
+* Powershell: Powershell in practice: Getting started + Working with people (user accounts) [nog niet gedocumenteerd].
+* Windows Server: beginscript(AD DHCP DNS zonder functies) + functies AD en DHCP + kleine cheatsheet
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w06/week06Ruben.PNG "tijdregistratie individueel Ruben")
 
 ### Robbe Van Daele
 
@@ -67,11 +70,21 @@
 
 ### Ruben Piro
 
+* Microsoft Virtual Academy module 8 en 9
+* Powershell 3.0 First Steps verder lezen (conclusie: veel beter boek gevonden als Manning powershell in practice)
+* Werken aan het powershell script met de functies die moeten vervolledigd worden.
+
+
 ### Robbe Van Daele
 
 ### Birgit Croux
 
-
+* Microsoft Virtual Academy les 2, 4, 5, 6
+* Powershell fundamentals:
+  - Variables and Objects
+  - Looping and Flow Control
+  - Strings and Unstructured Text
+* Verderwerken aan installatie Graphite
 
 ### Josey De Smet
 
