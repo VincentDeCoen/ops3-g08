@@ -24,9 +24,11 @@
 
 ### Vincent De Coen
 
-* ...
+* Microsoft Virtual Academy
+* Powershell automatisch script AD (niet gelukt)
+* Powershell boek beginnen lezen (WMI)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w06/week06Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
@@ -57,6 +59,9 @@
 
 ### Algemeen
 ### Vincent De Coen
+* Microsoft Virtual Academy uitkijken
+* Powershell boek verder lezen
+* Powershell scripting AD (testen)
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux
