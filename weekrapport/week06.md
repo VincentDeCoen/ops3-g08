@@ -36,6 +36,7 @@
 * Powershell: Powershell 3.0 First Steps Chapter 12 (Functions).
 * Powershell: Powershell in practice: Getting started + Working with people (user accounts) [nog niet gedocumenteerd].
 * Windows Server: beginscript(AD DHCP DNS zonder functies) + functies AD en DHCP + kleine cheatsheet
+* Vervolledigen van de documentatie
 
 ![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w06/week06Ruben.PNG "tijdregistratie individueel Ruben")
 
