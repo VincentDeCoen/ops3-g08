@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w06/kanbanteam.png "huboard team")
 
 * ...
 * ...
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w06/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -44,9 +44,10 @@
 
 ### Birgit Croux
 
-* ...
+* Oreilly Windows Powershell: interactive shell en pipelines
+* Simple LAMP: installatie Graphite (nog niet afgewerkt)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w06/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
@@ -58,13 +59,20 @@
 ## Wat plan je volgende week te doen?
 
 ### Algemeen
+
 ### Vincent De Coen
 * Microsoft Virtual Academy uitkijken
 * Powershell boek verder lezen
 * Powershell scripting AD (testen)
+
 ### Ruben Piro
+
 ### Robbe Van Daele
+
 ### Birgit Croux
+
+
+
 ### Josey De Smet
 
 ## Waar hebben jullie nog problemen mee?
