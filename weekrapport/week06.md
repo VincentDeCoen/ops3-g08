@@ -56,9 +56,10 @@
 
 ### Josey De Smet
 
-* ...
+* Microsoft virtual academy
+* Windows powershell 3.0 Step by Step : AD DNS : DomeinController
+* Bijbenen linux; lamp/vagrant
 
-[Afbeelding individueel rapport tijdregistratie]
 
 
 ## Wat plan je volgende week te doen?
@@ -90,7 +91,9 @@
 * Testplan voor Powershell AD scripts 
 
 ### Josey De Smet
-
+* Microsoft virtual Academy verder afwerken
+* Powershell boek verder lezen
+* Linux bijspringen collectd/graphite
 ## Waar hebben jullie nog problemen mee?
 
 * ...
