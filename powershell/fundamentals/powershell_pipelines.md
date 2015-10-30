@@ -42,8 +42,8 @@ comparison parameters of Where-Object directly:
 
 5. You can use Out-GridView -PassThru to create a simple script based on your PS command history:  
 
-    PS > $script = Get-History | Foreach-Object CommandLine | Out-GridView -PassThru
-    PS > $script | Set-Content c:\temp\script.ps1
+        PS > $script = Get-History | Foreach-Object CommandLine | Out-GridView -PassThru
+        PS > $script | Set-Content c:\temp\script.ps1
 
 
 ### Group data by property name
@@ -67,7 +67,7 @@ You might encounter problems if some property values are null (not supported in 
 
 ### Work with each item in a list
 
-cmdlet: `Foreach-Object { OPERATION }`
+cmdlet: `Foreach-Object { OPERATION }`  
 Aliases: foreach, %
 
 This cmdlet runs the script block for each item in the input.
@@ -77,7 +77,7 @@ You can specify script blocks to be run at the beginning and end of the pipeline
 
 Starting in PS 3.0, you can also use [operation statements] (https://technet.microsoft.com/en-us/library/hh849731.aspx) without using a script block (see examples 2-3).
 
-Example:
+Examples:
 
 1. Use Foreach-Object with -Begin and -End:
 
@@ -92,3 +92,35 @@ Example:
 3. The same example, without a script block:
 
         Get-Process | Foreach-Object Name
+
+### Automate data-intensive tasks
+
+Invoking a simple task on large amounts of data can be accomplished using Foreach-Object.
+
+For simple data, you can use text files as a source with the `Get-Content` cmdlet (example 1).   
+For more complex data, create a CSV file with a row for each task. Then, use cmdlet `Import-Csv` to import the data into PS (each line = 1 input object). The column headers from your CSV can now be used as properties for each object (example 2). If the CSV data is already available in a variable, use `ConvertFrom-Csv` to convert the values to objects.
+
+Examples:
+
+1. Using information from a text file to list OS information:  
+  (assuming you put a list of your servers' names in a text file)
+
+        PS > Get-Content servers.txt
+        SERVER1
+        SERVER2
+        PS > $computers = Get-Content servers.txt
+        PS > $computers | Foreach-Object {
+        Get-CimInstance Win32_OperatingSystem -Computer $_ }
+
+2. Using information from a CSV file to have access to multiple sources of related data:  
+  (assuming you created WmiReport.csv)
+
+          PS > Get-Content WmiReport.csv
+          ComputerName,Class
+          LEE-DESK,Win32_OperatingSystem
+          LEE-DESK,Win32_Bios
+          PS > $data = Import-Csv WmiReport.csv
+
+          PS > $data | Foreach-Object { Get-CimInstance $_.Class -Computer $_.ComputerName }
+
+### Intercept stages of the pipeline
