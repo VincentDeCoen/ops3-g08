@@ -1,0 +1,106 @@
+CREATE OU:
+	$strCLass = "organizationalUnit"
+	$StrOUName = "ou=MyTestOU"
+	$objADSI = [ADSI]"LDAP://dc=nwtraders,dc=msft"
+	$objOU = $objADSI.create($strCLass, $StrOUName)
+	$objOU.setInfo()
+
+
+Using the Active Directory module to deploy a new forest:
+"AddAdPrereqs.ps1"
+One of the first things that might need to be accomplished is setting the script execution policy. Whereas the easiest way to do this is via group policy, if you are configuring the first domain controller in the first domain in a new forest, you do not have that luxury. To set the script execution policy, use the Set-ExecutionPolicy cmdlet and set it to something like remotesigned.
+	Set-ExecutionPolicy remotesigned -force
+
+#set static IP address
+	$ipaddress = "192.168.0.225"
+	$ipprefix = "24"
+	$ipgw = "192.168.0.1"
+	$ipdns = "192.168.0.225"
+	$ipif = (Get-NetAdapter).ifIndex
+	New-NetIPAddress -IPAddress $ipaddress -PrefixLength $ipprefix `
+	-InterfaceIndex $ipif -DefaultGateway $ipgw
+	
+#rename the computer
+	$newname = "dc8508"
+	Rename-Computer -NewName $newname -force
+
+
+#install features
+	$featureLogPath = "c:\poshlog\featurelog.txt"
+	New-Item $featureLogPath -ItemType file -Force
+	$addsTools = "RSAT-AD-Tools"
+	Add-WindowsFeature $addsTools
+	Get-WindowsFeature | Where installed >>$featureLogPath
+	
+#restart the computer
+	Restart-Computer
+Once the computer reboots, log on and check things. Immediately, the Server Manager utility launches and provides feedback that the name change and the IP address change completed successfully.
+"Add-ADFeatures.ps1"
+#Install AD DS, DNS and GPMC
+$featureLogPath = "c:\poshlog\featurelog.txt"
+start-job -Name addFeature -ScriptBlock {
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
+Add-WindowsFeature -Name "dns" -IncludeAllSubFeature -IncludeManagementTools
+Add-WindowsFeature -Name "gpmc" -IncludeAllSubFeature -IncludeManagementTools }
+Wait-Job -Name addFeature
+Get-WindowsFeature | Where installed >>$featureLogPath
+
+"InstallNewForest.ps1"
+
+# Create New Forest, add Domain Controller
+$domainname = "nwtraders.msft"
+$netbiosName = "NWTRADERS"
+Import-Module ADDSDeployment
+Install-ADDSForest -CreateDnsDelegation:$false `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainMode "Win2012" `-DomainName $domainname `
+-DomainNetbiosName $netbiosName `
+-ForestMode "Win2012" `
+-InstallDns:$true `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+
+Add-DNDSPrereqsDC2.ps1
+
+#set static IP address
+$ipaddress = "192.168.0.226"
+$ipprefix = "24"
+$ipgw = "192.168.0.1"
+$ipdns = "192.168.0.225"
+$ipif = (Get-NetAdapter).ifIndex
+New-NetIPAddress -IPAddress $ipaddress -PrefixLength $ipprefix -InterfaceIndex $ipif
+-DefaultGateway $ipgw
+Set-DnsClientServerAddress -InterfaceIndex $ipif -ServerAddresses $ipdns
+
+#rename the computer
+$newname = "dc28508"
+Rename-Computer -NewName $newname -force
+
+#install roles and features
+$featureLogPath = "c:\poshlog\featurelog.txt"
+New-Item $featureLogPath -ItemType file -Force
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
+Get-WindowsFeature | Where installed >>$featureLogPath
+
+#restart the computer
+Restart-Computer
+Once the computer reboots, it is time to add the server to the domain as a domain controller. The first step is to import the ADDSDeployment module. Next, the Install-ADDSDomainController cmdlet is used to add the server as a domain controller to an existing domain. Because you did not want to install DNS, the -installdns parameter receives $false. In addition, the –replicationsourcedc parameter is set to the first domain controller that was built. The complete CreateAdditionalDC.ps1 script appears here:
+CreateAdditionalDC.ps1
+Import-Module ADDSDeployment
+Install-ADDSDomainController `
+-NoGlobalCatalog:$false `
+-CreateDnsDelegation:$False `
+-Credential (Get-Credential) `
+-CriticalReplicationOnly:$false ` 
+-DatabasePath "C:\Windows\NTDS" `
+-DomainName "nwtraders.msft" `
+-InstallDns:$False `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-ReplicationSourceDC "dc8508.nwtraders.msft" `
+-SiteName "Default-First-Site-Name" `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+
