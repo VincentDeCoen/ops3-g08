@@ -72,6 +72,7 @@
 * Microsoft Virtual Academy uitkijken
 * Powershell boek verder lezen
 * Powershell scripting AD (testen)
+* Linux LAMP stack testplan maken en testen
 
 ### Ruben Piro
 
