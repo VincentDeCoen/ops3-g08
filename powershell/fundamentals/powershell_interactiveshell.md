@@ -50,6 +50,13 @@ Common discovery commands:
 
 ## Fundamentals 1: The PowerShell interactive shell
 
+Note: skipped sections (for now)
+
+* 1.4 Supply default values for parameters
+* 1.6 Monitor a command for changes
+* 1.9 Customize User Input Behavior
+* 1.10 Customize Command Resolution Behavior
+
 ### Running programs, scripts, batch files
 
 ##### Command name
@@ -142,8 +149,6 @@ If you get errors passing arguments, you may try to:
 * Use the verbatim argument syntax: `--%`. This prevents PS from interpreting any of the remaining characters on the line. cmd.exe-style environment variables (eg. %host%) are accepted.
 * Review how PS is processing the arguments: `Trace-Command NativeCommandParameterBinder { COMMAND + ARGUMENTS } -PsHost`. This will provide a list of successive command arguments as PS sees them.
 
-### Supplying default values for parameters
-//TODO (low priority)
 
 ### Invoking Long-Running or Background commands
 
@@ -151,9 +156,43 @@ Invoke the command as a `Job`.
 
 * Start-Job: launch a background job .
   eg. `PS > Start-Job { while($true) { Get-Random; Start-Sleep 5 } } -Name Sleeper` (you can use this name when invoking other job-related commands)
-* parameter `-AsJob` available in many cmdlets
+* parameter `-AsJob` available in many cmdlets (performs the tasks in the background)
 * Get-Job: get all jobs associated with current session.
 * Wait-Job: wait for a job until it produces output
-* Receive-Job: retrieve any output generated since last call to Receive-Job
+* Receive-Job: retrieve any output generated since last call to Receive-Job (including errors)
 * Stop-Job: stops a job.
 * Remove-Job: remove a job from the list of active jobs.
+
+
+### Notifying yourself of job completion: one-time event handling
+
+When a job completes, it generates a StateChanged event to notify subscribers. `Register-TemporaryEvent` lets you define one-time event handling to react to this event.
+
+This example simply emits a beep and writes a message to the console when the job is complete.
+
+        PS > $job = Start-Job -Name TenSecondSleep { Start-Sleep 10 }
+        PS > Register-TemporaryEvent $job StateChanged -Action {
+        [Console]::Beep(100,100)
+        Write-Host "Job #$($sender.Id) ($($sender.Name)) complete."
+        }
+        PS > Job #6 (TenSecondSleep) complete.
+        PS >
+
+### Customizing your shell, program, prompt
+
+##### $profile
+
+Your personal profile script is stored in variable `$profile`. If you haven't done so already, you have to relax PowerShell's execution policy to allow scripting (cmdlet Set-ExecutionPolicy).
+
+* Show your profile file: `Get-ChildItem $profile`
+* Create a new profile (overwrite if exists): `New-Item -type file -force $profile`
+* Edit your profile (Integrated Scripting Environment): `ise $profile`
+
+##### Customize prompt
+
+Put a function called prompt in your profile script. Of course, you can just call this function at the prompt, but your changes won't be permanent.
+
+function prompt
+{
+"PS [$env:COMPUTERNAME] >"
+}
