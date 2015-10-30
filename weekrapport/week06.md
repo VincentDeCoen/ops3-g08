@@ -60,7 +60,7 @@
 * Windows powershell 3.0 Step by Step : AD DNS : DomeinController
 * Bijbenen linux; lamp/vagrant
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w06/Week6Josey.png "tijdregistratie individueel Josey")
+![Afbeelding individueel rapport tijdregistratie](media/w06/Week6Josey.png "tijdregistratie individueel Josey")
 
 
 
