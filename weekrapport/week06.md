@@ -48,6 +48,7 @@
 
 ### Birgit Croux
 
+* Microsoft Virtual Academy: pipelines
 * Oreilly Windows Powershell: interactive shell en pipelines
 * Simple LAMP: installatie Graphite (nog niet afgewerkt)
 
@@ -86,6 +87,7 @@
   - Looping and Flow Control
   - Strings and Unstructured Text
 * Verderwerken aan installatie Graphite
+* Testplan voor Powershell AD scripts 
 
 ### Josey De Smet
 
