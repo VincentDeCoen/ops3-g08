@@ -86,7 +86,9 @@ Get-WindowsFeature | Where installed >>$featureLogPath
 
 #restart the computer
 Restart-Computer
-Once the computer reboots, it is time to add the server to the domain as a domain controller. The first step is to import the ADDSDeployment module. Next, the Install-ADDSDomainController cmdlet is used to add the server as a domain controller to an existing domain. Because you did not want to install DNS, the -installdns parameter receives $false. In addition, the –replicationsourcedc parameter is set to the first domain controller that was built. The complete CreateAdditionalDC.ps1 script appears here:
+Once the computer reboots, it is time to add the server to the domain as a domain controller. The first step is to import the ADDSDeployment module. Next, the Install-ADDSDomainController cmdlet is used to add the server as a domain controller to an existing domain. Because you did not want to install DNS, the -installdns parameter receives $false. In addition, the –replicationsourcedc parameter is set to the first domain controller that was built. 
+
+The complete CreateAdditionalDC.ps1 script appears here:
 CreateAdditionalDC.ps1
 Import-Module ADDSDeployment
 Install-ADDSDomainController `
