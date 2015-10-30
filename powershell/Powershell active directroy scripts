@@ -106,3 +106,91 @@ Install-ADDSDomainController `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
 
+#install AD DS Role and tools
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
+
+CreateDC3Prereqs.ps1
+#set static IP address
+$ipaddress = "192.168.0.227"
+$ipprefix = "24"
+$ipgw = "192.168.0.1"
+$ipdns = "192.168.0.225"
+$ipif = (Get-NetAdapter).ifIndex
+New-NetIPAddress -IPAddress $ipaddress -PrefixLength $ipprefix -InterfaceIndex $ipif
+-DefaultGateway $ipgw
+Set-DnsClientServerAddress -InterfaceIndex $ipif -ServerAddresses $ipdns
+#rename the computer
+$newname = "dc38508"
+Rename-Computer -NewName $newname -force
+#install AD DS Role and tools
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
+#restart the computer
+Restart-Computer
+
+CreateReadOnlyDomainController.ps1
+Import-Module ADDSDeployment
+Install-ADDSDomainController `
+-AllowPasswordReplicationAccountName @("NWTRADERS\Allowed RODC Password Replication Group") `
+-NoGlobalCatalog:$false `
+-Credential (Get-Credential -Credential nwtraders\administrator) `
+-CriticalReplicationOnly:$false `
+-DatabasePath "C:\Windows\NTDS" `
+-DenyPasswordReplicationAccountName @("BUILTIN\Administrators",
+"BUILTIN\Server Operators", "BUILTIN\Backup Operators",
+"BUILTIN\Account Operators",
+"NWTRADERS\Denied RODC Password Replication Group") `
+-DomainName "nwtraders.msft" `
+-InstallDns:$false
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-ReadOnlyReplica:$true `
+-SiteName "Default-First-Site-Name" `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+=> When the script runs, Active Directory Users and Computers on the first domain controller
+refreshes to include the new read-only domain controller. This appears in Figure 17-7.
+
+STEP BY STEP : 
+Installing domain controller prerequisites
+1. Log on to your server with the administrator account.
+
+2. Open the Windows PowerShell ISE.
+
+3. Set the script execution policy to remotesigned. The command appears here:
+Set-ExecutionPolicy remotesigned -force
+
+4. Use the Get-NetAdapter cmdlet to determine the interface index number of the active network
+adapter. The command appears here:
+$ipif = (Get-NetAdapter).ifIndex
+
+5. Import the ADDSDeployment module. The command appears here:
+Import-Module ADDSDeployment
+
+6. Add the Install-ADDSForest cmdlet to your script. Use tab expansion to simplify typing. Add
+the -CreateDnsDelegation parameter and set it to false. Add the line-continuation character
+at the end of the line. This appears here:
+Install-ADDSForest -CreateDnsDelegation:$false `
+
+7. Specify the -DatabasePath, -DomainMode, -DomainName, and -DomainNetbiosName parameters.
+Use the domain name and NetBIOS name stored in the variables created earlier. Make
+sure you have line continuation at the end of each line. This portion of the command appears
+here:
+-DatabasePath "C:\Windows\NTDS" `
+-DomainMode "Win2012" `
+-DomainName $domainname `
+-DomainNetbiosName $netbiosName
+
+8. Specify the -ForestMode, -LogPath, and -SysVolpath parameters. In addition, you will need
+to supply options for the -installDNS and -rebootoncompletion parameters. Use the -Force
+parameter. This portion of the script appears here:
+-ForestMode "Win2012" `
+-InstallDns:$true `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+
+9. Run the script. You will be prompted for a directory-restore password, and you’ll have to type
+it twice. Your server will also reboot once the configuration is completed. To log on to the
+server, use your directory-restore password.
+
