@@ -83,6 +83,12 @@ cp /opt/graphite/conf/carbon.conf.example /opt/graphite/conf/carbon.conf
 Zorgen dat Apache naar de database kan schrijven:
 chown -R apache:apache /opt/graphite/storage/
 
+Configuratie van Apache (toevoegen in /etc/httpd/conf/httpd.conf)  
+(zie commentaar in /opt/graphite/conf/carbon.conf)
+
+        NameVirtualHost *:80
+        LoadModule wsgi_module modules/mod_wsgi.so
+
 Configuratie van [dataretentie voor whisper](http://graphite.readthedocs.org/en/latest/config-carbon.html).
 D.i. precisie (tijd tussen datapunten): historiek (hoe lang bijhouden)
 
