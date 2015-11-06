@@ -53,7 +53,7 @@
 * MVA module 1 en 2
 * Windows powershell : Deploying AD with ws2012
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Josey.png "tijdregistratie individueel birgit")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Josey.jpg "tijdregistratie individueel birgit")
 
 
 ## Wat plan je volgende week te doen?
