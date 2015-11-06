@@ -28,7 +28,7 @@
 * Onderwerp boek PS gekozen (WMI&CIM)
 * Linux testen Lampstack
 
-![Afbeelding individueel rapport tijdregistratie] ](/weekrapport/media/w07/week07Vincent.PNG "tijdregistratie individueel Vincent")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
