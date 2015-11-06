@@ -50,12 +50,15 @@
 
 ### Josey De Smet
 
-* ...
+* MVA module 1 en 2
+* Windows powershell : Deploying AD with ws2012
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Josey.png "tijdregistratie individueel birgit")
 
 
 ## Wat plan je volgende week te doen?
+* MVA proberen volledig af te werken of toch op zen minst voor driekwart of meer van de modules
+* Debugging scripts en handling errors in windows Powershell (= 2 chapters in boek)
 
 ### Algemeen
 ### Vincent De Coen
