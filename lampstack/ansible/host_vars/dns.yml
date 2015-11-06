@@ -1,0 +1,7 @@
+bind_zone_master_server_ip:
+- ip: '192.168.56.79'
+bind_zone_hosts:
+- name: dns
+  ip: '192.168.56.79'
+bind_zone_name_servers:
+- 'dns'

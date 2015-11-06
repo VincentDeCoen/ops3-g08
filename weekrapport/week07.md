@@ -24,9 +24,11 @@
 
 ### Vincent De Coen
 
-* ...
+* Microsoft Virtual Academy uitgekeken & gedocumenteerd
+* Onderwerp boek PS gekozen (WMI&CIM)
+* Linux testen Lampstack
 
-[Afbeelding individueel rapport tijdregistratie]
+[Afbeelding individueel rapport tijdregistratie] ](/weekrapport/media/w07/week07Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
@@ -62,8 +64,8 @@
 
 ### Algemeen
 ### Vincent De Coen
-* Winsows Server testrapport uitwerken
-
+* Windows Server testrapport uitwerken
+* Powershell boek lezen (WMI&CIM)
 ### Ruben Piro
 * Powershell 3.0 First Steps goed lezen, deze week niets kunnen lezen.
 * Windows Server Testplan opstellen
