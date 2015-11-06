@@ -20,13 +20,15 @@
 * Installatie Graphite + PostgreSQL op monitoring server
 * Testplan + testen web server
 
-![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w07/togglteam.png "toggl team")
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w07/togglteam.PNG "toggl team")
 
 ### Vincent De Coen
 
-* ...
+* Microsoft Virtual Academy uitgekeken & gedocumenteerd
+* Onderwerp boek PS gekozen (WMI&CIM)
+* Linux testen Lampstack
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
@@ -50,22 +52,26 @@
 
 ### Josey De Smet
 
-* ...
+* MVA module 1 en 2
+* Windows powershell : Deploying AD with ws2012
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Josey.jpg "tijdregistratie individueel birgit")
 
 
 ## Wat plan je volgende week te doen?
+* MVA proberen volledig af te werken of toch op zen minst voor driekwart of meer van de modules
+* Debugging scripts en handling errors in windows Powershell (= 2 chapters in boek)
 
 ### Algemeen
 ### Vincent De Coen
-* Winsows Server testrapport uitwerken
+* Windows Server testrapport uitwerken
+* Powershell boek lezen (WMI&CIM)
 
 ### Ruben Piro
 * Powershell 3.0 First Steps goed lezen, deze week niets kunnen lezen.
 * Windows Server Testplan opstellen
 
-### Robbe Van Daele
+
 ### Birgit Croux
 ### Josey De Smet
 
