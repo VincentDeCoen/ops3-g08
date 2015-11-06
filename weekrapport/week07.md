@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w07/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Installatie Graphite + PostgreSQL op monitoring server
+* Testplan + testen web server
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w07/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -43,8 +43,9 @@
 ### Birgit Croux
 
 * MVA-cursus afgemaakt
+* Installatie Graphite (zie werkdocument)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
