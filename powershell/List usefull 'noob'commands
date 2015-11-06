@@ -1,0 +1,39 @@
+Get-Help—The Get-Help cmdlet helps you learn how to use PowerShell. Get-Help not only explains the syntax of commands, but it also provides examples of how to use them. The following example shows how to use Get-Help to learn about the PowerShell Help system itself:
+
+  get-help
+
+cd—You can use the good ole’ cd (Change Directory) command to navigate between folders. Under the covers, cd is an alias for the Set- Location cmdlet. What sets this command apart from the old Windows shell cd command is its ability to navigate the registry. To use cd to go into the HKEY_LOCAL_MACHINE\SOFTWARE subkey, you would enter
+
+  cd hklm:\software
+
+Get-Alias—PowerShell has more than a hundred different aliases. Plus, you can create custom aliases with the New-Alias cmdlet. Use the Get-Alias cmdlet (or its alias, gal) to list all the Power-Shell aliases along with their native counterparts:
+
+  gal | select name, definition
+
+Get-Command—You use the Get-Command cmdlet to retrieve a list of the hundreds of available commands. PowerShell’s support for wildcards helps you narrow your searches. The following example retrieves all the commands that begin with get:
+
+  get-command get*
+
+Set-Content—Set-Content (or its alias, sc) is used to write values to a file. If the specified target file doesn’t exist, this command creates it. For example, the following command writes the value “My data” to the file named mynewfile.txt:
+
+  sc c:\temp\mynewfile.txt -value “My data”
+
+Get-Content—The counterpart to sc is Get-Content (gc). The gc cmdlet is used to read the contents of a file. For example, the following command displays the contents of the file named mynewfile.txt:
+
+  gc c:\temp\mynewfile.txt
+
+Set-ExecutionPolicy—By default, PowerShell’s ability to run scripts is disabled; you can only enter commands at the command line. The Set-ExecutionPolicy cmdlet lets you change the security level for running scripts. To enable PowerShell to run any script, you can enter the following command:
+
+  set-executionpolicy unrestricted
+
+Set-PsDebug—Although PowerShell doesn’t have a full-featured debugger, it does have basic debugging capabilities through the Set-PsDebug cmdlet. Entering the following command will cause a PowerShell script to step through its execution one line at a time:
+
+  set-psdebug -step
+
+Get-Process—PowerShell has great built-in commands that let you perform many tasks that formerly required resource kits or third-party tools. For example, the Get-Process cmdlet retrieves information about the active processes on a system. Use the following example to list all running processes:
+
+  get-process
+
+Get-Eventlog—The Get-Eventlog cmdlet retrieves Windows event logs. As with Get-Process, there’s no need for additional utilities. The following example shows how you can retrieve the 10 most recent entries from the system event log:
+
+  get-eventlog -newest 10 -logname system 
