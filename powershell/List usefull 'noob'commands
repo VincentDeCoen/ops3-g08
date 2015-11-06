@@ -37,3 +37,189 @@ Get-Process—PowerShell has great built-in commands that let you perform many t
 Get-Eventlog—The Get-Eventlog cmdlet retrieves Windows event logs. As with Get-Process, there’s no need for additional utilities. The following example shows how you can retrieve the 10 most recent entries from the system event log:
 
   get-eventlog -newest 10 -logname system 
+
+***Managing Modules
+How to find loaded Modules?
+
+Get-Module
+How to find available modules?
+
+Get-Module -ListAvailable
+How to import a Module?
+
+import-module activedirectory
+How to get help for Modules?
+
+Get-Help about_module
+How to import All modules all together.
+
+Get-Module -ListAvailable | Import-Module -Verbose
+How to find particular module commands ?
+
+Get-Command -Module activedirectory
+How to find Module name of the CMDLETs
+
+get-command get-*
+
+***Getting Help
+How to get Particular CMDLET help?
+get-help Get-Service 
+
+get-help Get-Service -Full
+
+get-help Get-Service -Detailed
+
+get-help Get-Service -ShowWindow
+
+get-help Get-Service -Online
+
+get-help Get-Service -Examples
+How to get full help  of a Module (e.g. grouppolicy, activedirectory)
+
+GCM -Module grouppolicy | Foreach {get-help $_.name -Examples} GCM -Module activedirectory | Foreach {get-help $_.name -Examples}   
+How to Update Powershell Help
+
+Update-Help -Force
+
+***Powershell environment
+How to check Powershell Path
+
+$Pshome
+How to find Powershell Alias
+
+GAL
+How to find a particular Alias
+#GAL is the Alias of  Get-Alias
+GAL -Definition Get-Service
+How to check Powershell Version?
+Environment Variable to get PowerShell Version
+
+$PSVersionTable
+
+OR
+
+($PSVersionTable).BuildVersion
+
+=================================
+
+$host.Version.Major OR $psversiontable OR Get-Host | Select-Object Version
+How to change the execution Policy?
+Set-ExecutionPolicy Unrestricted
+or
+
+Set-ExecutionPolicy Unrestricted CurrentUser
+
+#Without Prompt
+
+Set-ExecutionPolicy Unrestricted -force
+
+#Recomendad seeting is Allsigned/Remotesigned
+
+#There are Five Policies-Restricted(Default Setting),Unrestricted,Allsigned,
+
+  Remotesigned & Bypass.
+***System Management
+Event Log
+When & who rebooted the system? (Below simplified command is required Powershell 3 & above, "?" is used for "where")
+Get-EventLog -log System | ? EventID -EQ 12 | select username,TimeGenerated
+
+or
+
+Get-EventLog -log System | where EventID -EQ 12 | select username,TimeGenerated
+
+or
+
+Get-EventLog System | ? Source -eq user32 | select MachineName,TimeGenerated,UserName,Message -First 1
+How to find LastBootupTime ? (Required Powershell 3 & above)
+
+Get-CimInstance Win32_OperatingSystem | select  csname,LastBootUpTime
+
+Getting Computer OS & SP for multiple Computers
+$computers = get-content C:\computers.txt
+Get-WmiObject win32_operatingsystem -ComputerName $computers  | select CSName,Caption, CSDVersion | FL
+
+***How to enable WinRM ?
+
+winrm qc
+
+***Directory Servcies
+Find attributes from bulk computers.
+Function Com-Attrs {
+$Computers= get-content C:\computers.txt
+foreach ($Computer in $computers)
+{
+ 
+Get-ADComputer $Computer | 
+Select-Object DNSHostName,Enabled,SamAccountName
+ 
+    }
+ 
+}
+Com-Attrs | FT -AutoSize
+
+**WSMAN Registry key
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN
+**How to check WINRM Settings.
+
+winrm get winrm/config
+**How to change "MaxEnvelopeSizekb" value ?
+
+winrm set winrm/config @{MaxEnvelopeSizekb="1024"}
+**Remotely getting NTP Servers from PDC - Below is the Code
+
+$computer = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name 
+$Reg = [Microsoft.Win RegistryKey]::OpenRemoteBaseKey('LocalMachine', $computer) 
+$RegKey= $Reg.OpenSubKey("SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters") 
+$NTP = $Regkey.GetValue("NtpServer") 
+Write-host $NTP -BackgroundColor DarkMagenta -ForegroundColor Cyan
+
+DCs Inventory 
+
+[system.directoryservices.activedirectory.domain]::GetCurrentDomain().DomainControllers | Select Name,IPAddress,OSVersion,SiteName | FT -AutoSize
+Getting the Domain Functional level
+
+[system.directoryservices.activedirectory.domain]::GetCurrentDomain().DomainMode
+Getting the Forest Functional level
+
+[system.directoryservices.activedirectory.forest]::GetCurrentForest().ForestMode
+Getting the Trust
+
+[system.directoryservices.activedirectory.domain]::GetCurrentDomain().GetTrustRelationship()
+*How to restore the ActiveDirectory Objects
+. See the Tombstone
+Get-ADObject -Filter {LastKnownparent -eq "OU=ADFS,DC=Contoso,DC=COM"} -IncludeDeletedObjects
+ 
+ Restore the Object
+Get-ADObject -Filter {LastKnownparent -eq "OU=ADFS,DC=Contoso,DC=COM"} -IncludeDeletedObjects | Restore-ADObject -NewName bshwjt
+See the deleted Objects From Active Directory Recycle BIN
+##Prerequsites : . WIndows 2008 R2 DFL 2) Active Directory Recycle Bin
+Get-ADObject –SearchBase “CN=Deleted Objects,DC=Contoso,DC=Com” –ldapFilter “(objectClass=*)” -includeDeletedObjects | FL *
+Total Sites
+[system.directoryservices.activedirectory.forest]::GetCurrentForest().Sites.Count
+All Sites Name
+ 
+[system.directoryservices.activedirectory.forest]::GetCurrentForest().Sites.name
+DCs 
+[system.directoryservices.activedirectory.domain]::GetCurrentDomain().DomainControllers
+Nos. of DCs
+ 
+[system.directoryservices.activedirectory.domain]::GetCurrentDomain().DomainControllers.Count
+Logon Information
+Get-ItemProperty -Path 'HKCU:\Volatile Environment'
+How to check Active directory recycle bin enabled or not ?
+
+Get-ADOptionalFeature -F 'name -like "Recycle Bin Feature"' | Select-Object EnabledScopes
+
+Active directory recycle bin is disabled ,If above command output is empty.
+
+ 
+Get the permission of an User for an OU
+
+ipmo activedirectory
+
+cd ad:
+
+$ACL = get-acl 'AD:\OU=cno,ou=cno,Dc=contoso,DC=com' | select -exp Access | ? IdentityReference -match 'kerbtest'
+
+$ACL
