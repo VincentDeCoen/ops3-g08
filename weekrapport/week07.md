@@ -30,9 +30,10 @@
 
 ### Ruben Piro
 
-* ...
+* Windows Server: OU in powershell uittesten + opzoeking DHCP en DNS powershell 
+* Powershell: Microsoft Virtual Academy: 8 en 9 
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w07/week07Ruben.PNG "tijdregistratie individueel Ruben")
 
 ### Robbe Van Daele
 
@@ -58,7 +59,12 @@
 
 ### Algemeen
 ### Vincent De Coen
+* Winsows Server testrapport uitwerken
+
 ### Ruben Piro
+* Powershell 3.0 First Steps goed lezen, deze week niets kunnen lezen.
+* Windows Server Testplan opstellen
+
 ### Robbe Van Daele
 ### Birgit Croux
 ### Josey De Smet
