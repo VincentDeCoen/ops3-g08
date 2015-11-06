@@ -15,12 +15,12 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w06/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Gewerkt aan automatisering AD
+* Gewerkt aan installatie en configuratie Graphite
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w06/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -36,6 +36,7 @@
 * Powershell: Powershell 3.0 First Steps Chapter 12 (Functions).
 * Powershell: Powershell in practice: Getting started + Working with people (user accounts) [nog niet gedocumenteerd].
 * Windows Server: beginscript(AD DHCP DNS zonder functies) + functies AD en DHCP + kleine cheatsheet
+* Vervolledigen van de documentatie
 
 ![Afbeelding individueel rapport tijdregistratie] (/weekrapport/media/w06/week06Ruben.PNG "tijdregistratie individueel Ruben")
 
@@ -47,15 +48,20 @@
 
 ### Birgit Croux
 
-* ...
+* Microsoft Virtual Academy: pipelines
+* Oreilly Windows Powershell: interactive shell en pipelines
+* Simple LAMP: installatie Graphite (nog niet afgewerkt)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w06/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
-* ...
+* Microsoft virtual academy
+* Windows powershell 3.0 Step by Step : AD DNS : DomeinController
+* Bijbenen linux; lamp/vagrant
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](media/w06/Week6Josey.png "tijdregistratie individueel Josey")
+
 
 
 ## Wat plan je volgende week te doen?
@@ -66,16 +72,31 @@
 * Microsoft Virtual Academy uitkijken
 * Powershell boek verder lezen
 * Powershell scripting AD (testen)
+* Linux LAMP stack testplan maken en testen
 
 ### Ruben Piro
-*Microsoft Virtual Academy module 8 en 9
-*Powershell 3.0 First Steps verder lezen (conclusie: veel beter boek gevonden als Manning powershell in practice)
-*Werken aan het powershell script met de functies die moeten vervolledigd worden.
+
+* Microsoft Virtual Academy module 8 en 9
+* Powershell 3.0 First Steps verder lezen (conclusie: veel beter boek gevonden als Manning powershell in practice)
+* Werken aan het powershell script met de functies die moeten vervolledigd worden.
+
 
 ### Robbe Van Daele
-### Birgit Croux
-### Josey De Smet
 
+### Birgit Croux
+
+* Microsoft Virtual Academy les 2, 4, 5, 6
+* Powershell fundamentals:
+  - Variables and Objects
+  - Looping and Flow Control
+  - Strings and Unstructured Text
+* Verderwerken aan installatie Graphite
+* Testplan voor Powershell AD scripts 
+
+### Josey De Smet
+* Microsoft virtual Academy verder afwerken
+* Powershell boek verder lezen
+* Linux bijspringen collectd/graphite
 ## Waar hebben jullie nog problemen mee?
 
 * ...
