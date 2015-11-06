@@ -70,6 +70,7 @@
 ### Ruben Piro
 * Powershell 3.0 First Steps goed lezen, deze week niets kunnen lezen.
 * Windows Server Testplan opstellen
+* Windows Server functies inlassen
 
 
 ### Birgit Croux
