@@ -66,11 +66,12 @@
 ### Vincent De Coen
 * Windows Server testrapport uitwerken
 * Powershell boek lezen (WMI&CIM)
+
 ### Ruben Piro
 * Powershell 3.0 First Steps goed lezen, deze week niets kunnen lezen.
 * Windows Server Testplan opstellen
 
-### Robbe Van Daele
+
 ### Birgit Croux
 ### Josey De Smet
 
