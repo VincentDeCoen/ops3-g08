@@ -5,7 +5,7 @@ require 'rbconfig'
 require 'yaml'
 
 BOX_NAME = 'centos71-nocm'
-BOX_URL = 'https://tinfbo2.hogent.be/pub/vm/centos71-nocm-1.0.16.box'
+BOX_URL = 'C:/Users/Vincent/centos71-nocm-1.0.16.box'
 
 VAGRANTFILE_API_VERSION = '2'
 

@@ -124,3 +124,13 @@ Examples:
           PS > $data | Foreach-Object { Get-CimInstance $_.Class -Computer $_.ComputerName }
 
 ### Intercept stages of the pipeline
+
+At the end of any pipeline: PS adds an implicit call to cmdlet `Out-Default`.
+
+When a pipeline is created, PS calls method BeginProcessing() of each command in the pipeline.  
+PS sends each object emitted by the pipeline to the ProcessRecord() method of the next command in the pipeline.  
+After processing all items, PS call method EndProcessing of each command.
+
+Script New-Commandwrapper (scripts/general) can be used to wrap the Out-Default command in order to customize processing. New-Commandwrapper has parameters -Begin, -Process, and -End (script blocks) to let you insert processing in the different stages of the pipeline.
+
+Example: wrap Out-Default using script New-Commandwrapper in order to automatically capture Pipeline output: scripts/general Add-ObjectCollector.ps1
