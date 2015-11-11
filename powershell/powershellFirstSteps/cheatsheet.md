@@ -1,5 +1,5 @@
 # Cheatsheet Powershell 3.0 First Steps
-  ######- Author: Ruben -
+  ###### Author: Ruben
 =======================================
 
 ## Chapter 1: Overview
