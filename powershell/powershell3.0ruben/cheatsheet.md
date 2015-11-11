@@ -31,5 +31,9 @@
 |Stop-Transcript| Stops a transcript|
 
 
+## Chapter 3: Filtering, grouping and sorting
+----------------------------------------------
 
+|Cmdlet|Description|
+|------|-----------|
 
