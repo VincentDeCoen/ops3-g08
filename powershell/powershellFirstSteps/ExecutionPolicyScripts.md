@@ -33,3 +33,6 @@ The policy only affects the current process
 The policy only affects the current user
 ##### 3. LocalMachine
 The policy affects all the users of the machine
+
+######Example:
+```SetExecutionPolicy -Scope CurrentUser -ExecutionPolicy remotesigned```
