@@ -2,7 +2,7 @@
 ###### Author: Ruben
 =======================================
 
-## Chapter 1: Overview
+## Chapter 1: Overview of Powershell 3.0
 ----------------------
 
 |Cmdlet|Description|
@@ -16,4 +16,20 @@
 |Get-Random|Shows a random number|
 |Get-Random 21|Shows a random number(max 21)|
 |Update-Help -Force|Force an update of the help system|
+
+## Chapter 2: Using Windows Powershell cmdlets
+----------------------------------------------
+
+|Cmdlet|Description|
+|------|-----------|
+|Get-Help|Displays help about Windows Powershell cmdlets and concepts|
+|Get-Command|Gets all the commands, installed on the current system|
+|Get-Member|Command that gets the properties and methods of objects|
+|Show-Command|Shows a graphical input control|
+|Stop-Process|Stops a specific process|
+|Start-Transcript|Starts a transcript, a special outputfile (transcript) has been created|
+|Stop-Transcript| Stops a transcript|
+
+
+
 
