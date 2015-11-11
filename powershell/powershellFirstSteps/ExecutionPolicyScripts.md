@@ -21,7 +21,8 @@ If you run an unsigned script that was downloaded from the Internet, you are pro
 it runs.
 ##### 5. Bypass 
 Nothing is blocked and there are no warnings or prompts.
-##### 6. Undefined Removes the currently assigned execution policy from the current scope.
+##### 6. Undefined 
+Removes the currently assigned execution policy from the current scope.
 This parameter does not remove an execution policy that is set in a Group Policy
 scope.
 
