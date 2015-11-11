@@ -1,6 +1,10 @@
-### Setting the Script Execution Policy
--------------- -------------------------
+## Powershell 3.0 First Steps
+------------------------------
 ###### Author: Ruben
+
+### Setting the Script Execution Policy
+---------------------------------------
+
 
 ####A Policy
 
@@ -37,3 +41,7 @@ The policy affects all the users of the machine
 
 ######Example:
 ```SetExecutionPolicy -Scope CurrentUser -ExecutionPolicy remotesigned```
+
+
+### Filtering, Grouping and sorting
+-------------- -------------------------
