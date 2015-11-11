@@ -5,7 +5,6 @@
 ### Setting the Script Execution Policy
 ---------------------------------------
 
-
 ####A Policy
 
 If you have administrator rights on your system, you can set the script execution policy.
@@ -43,5 +42,4 @@ The policy affects all the users of the machine
 ```SetExecutionPolicy -Scope CurrentUser -ExecutionPolicy remotesigned```
 
 
-### Filtering, Grouping and sorting
--------------- -------------------------
+
