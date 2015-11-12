@@ -157,7 +157,7 @@ WMI class.
  If you want to retrieve ALL the properties from the WIN32_computersystem class, than you can use
  the following command:
  
- **Get-WmiObject WIN32_ComputerSystem | Format-List * **
+ **Get-WmiObject WIN32_ComputerSystem | Format-List ***
 
 We can find aliases by using the following command: **Get-Alias**
 
