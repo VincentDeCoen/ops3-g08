@@ -1,16 +1,16 @@
 ## Testplan en -rapport taak 1: (titel)
 
-* Verantwoordelijke uitvoering: NAAM
-* Verantwoordelijke testen: NAAM
+* Verantwoordelijke uitvoering: Ruben Piro
+* Verantwoordelijke testen: Vincent De Coen
 
 ### Testplan
 
-Auteur(s) testplan: NAAM
+######Auteur(s) testplan: Ruben Piro
 
-- ...
+
 
 ### Testrapport
 
-Uitvoerder(s) test: NAAM
+######Uitvoerder(s) test: Vincent De Coen
 
 - ...
