@@ -36,7 +36,7 @@ function InstallDHCP{
 #Update
     Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\AUoptions" 
     
-# OU
+#OU
 function CreateOU{
     New-ADOrganizationalUnit -Name AsAfdelingen -Path 'DC=Assengraaf,DC=NL' -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Beheer -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -ProtectedFromAccidentalDeletion $False #nog block inheritance
@@ -44,5 +44,26 @@ function CreateOU{
     New-ADOrganizationalUnit -Name Verzekeringen -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Financieringen -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Staf -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -ProtectedFromAccidentalDeletion $False
+}
+
+#CSV Import
+function Add-Users {
+    $Users = Import-CSV -Delimiter "," -Path ".\AssengraafPersoneel.csv" 
+	ForEach($User in $Users) {
+        $i++
+	    $DisplayName = $User.GivenName + " " + $User.Surname
+	    $UserFirstname = $User.GivenName
+	    $FirstLetterFirstname = $UserFirstname.substring(0,1)
+	    $UserSurname = if($User.Surname.contains(" ")){$User.Surname -replace ' ', '_'} else {$User.Surname}
+	    $SurName = $User.Surname
+	    $GivenName = $User.GivenName
+	    $SAM = $FirstLetterFirstname + $UserSurname
+	    $City = $User.City
+	    $Password = ConvertTo-SecureString -AsPlainText $Pass -force
+        $OuPath = 'OU=' + $User.Afdeling + ',DC=Assengraaf,DC=NL'
+    
+        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName `
+        -GivenName $GivenName -SurName $SurName -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true
+    }
 }
 
