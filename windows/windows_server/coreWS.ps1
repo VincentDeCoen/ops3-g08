@@ -62,7 +62,7 @@ function Add-Users {
 	    $Password = ConvertTo-SecureString -AsPlainText $Pass -force
         $OuPath = 'OU=' + $User.Afdeling + ',DC=Assengraaf,DC=NL'
     
-        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName `
+        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName 
         -GivenName $GivenName -SurName $SurName -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true
     }
 }
