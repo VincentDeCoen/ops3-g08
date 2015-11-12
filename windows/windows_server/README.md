@@ -1,7 +1,9 @@
-Het script en csv-bestand voor de windows opdracht kan je in deze map vinden.
+###AsSv1
 
-Script: coreWS.ps1
-CSV: AssengraafPersoneel.csv
+
+######Script: AsScript.ps1
+
+######CSV-bestand: AsCSV.csv
 
 bronnen:
 desired state: https://gallery.technet.microsoft.com/scriptcenter/xActiveDirectory-f2d573f3
