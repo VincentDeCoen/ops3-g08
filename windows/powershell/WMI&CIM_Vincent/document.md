@@ -611,6 +611,7 @@ number from your system):
 appears here:
 ```$bios.Version```
 
+
 ### Calling WMI Methods on WMI Classes
 --------------------------------------
 
