@@ -37,7 +37,10 @@ Windows-Server:
 Powershell:
 - Powershell 3.0 First Steps: Cheatsheet + documentatie (zie windows/powershell/3.0Ruben)
 
-[Afbeelding individueel rapport tijdregistratie]
+Linux:
+- Testplan gevolgd
+
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w08/week08Ruben.PNG "tijdregistratie individueel Ruben")
 
 ### Robbe Van Daele
 
