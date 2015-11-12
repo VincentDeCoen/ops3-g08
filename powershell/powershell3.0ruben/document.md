@@ -2,6 +2,7 @@
 ------------------------------
 ###### Author: Ruben
 
+
 ### 1 Setting the Script Execution Policy
 ---------------------------------------
 
@@ -53,7 +54,7 @@ then you can use the pipeline: ```Get-Process | Sort-Object -Property VM -Descen
 
 A tip: the command `Sort` is an alias for `Sort-Object`.
 
-//AFB 1//
+![Afbeelding1](/powershell/3.0Ruben/afb/afb1.PNG )
 
 #### 2.2 Grouping afther sorting
 ---------------------------------------
@@ -62,6 +63,8 @@ You can group objects with the ```Group-Object``` command, used in a pipeline wi
 
 Do the following command in the Windows Powershell console:
 ```Get-Service | Sort-Object status | Group-Object -Property status```
+
+![Afbeelding2](/powershell/3.0Ruben/afb/afb2.PNG )
 
 #### 2.3 Filtering output from one cmdlet
 ------------------------------------------
@@ -73,3 +76,11 @@ To achieve this, we need to use filters.
 ```Get-HotFix | Where installedon -gt 12/1/12```
 This command returns all hotfixes, installed after December 1, 2012.
 
+![Afbeelding3](/powershell/3.0Ruben/afb/afb3.PNG )
+
+### 3 Formatting Output
+---------------------------------------
+#### 3.1 Creating a list
+```|Get-Process | Format-List -Property VM```
+
+![Afbeelding4](/powershell/3.0Ruben/afb/afb4.PNG )
