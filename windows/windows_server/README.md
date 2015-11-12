@@ -1,4 +1,7 @@
-Het script voor de installatie van AD, DNS , DHCP kan u vinden onder de naam 'beginscript.ps1'
+Het script en csv-bestand voor de windows opdracht kan je in deze map vinden.
+
+Script: coreWS.ps1
+CSV: AssengraafPersoneel.csv
 
 bronnen:
 desired state: https://gallery.technet.microsoft.com/scriptcenter/xActiveDirectory-f2d573f3
