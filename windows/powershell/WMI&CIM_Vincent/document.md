@@ -106,8 +106,8 @@ through all the classes is difficult at best.
 
 The best solution is to stay focused on a single WMI namespace, and to use wildcard characters to
 assist in finding appropriate WMI classes. For example, you can use the wildcard pattern "*bios*" to
-find all WMI classes that contain the letters bios in the class name. In code: ```Get-WmiObject -List
- "*bios*"``` 
+find all WMI classes that contain the letters bios in the class name. In code: 
+```Get-WmiObject -List "*bios*"```
 
 #### Querying WMI
 -----------------
@@ -538,9 +538,11 @@ Version : VRTUAL - 3000919
 If you do not have DCOM and RPC access to the remote system, you can use the Invoke-Command
 cmdlet to run the WMI command on the remote system as a job.
 
-```$credential = Get-Credential iammred\administrator```
-```Invoke-Command -ComputerName w8s504 -Credential $credential
--ScrtBlock {gwmi win32_service} -AsJob```
+``` 
+$credential = Get-Credential iammred\administrator
+Invoke-Command -ComputerName w8s504 -Credential $credential
+-ScrtBlock {gwmi win32_service} -AsJob
+``` 
 
 #### Using Windows PowerShell remoting and WMI
 ----------------------------------------------
@@ -609,7 +611,10 @@ number from your system):
 ```$bios = Receive-Job -id 12```
 9. Now query the BIOS version by accessing the version property from the $bios variable. This
 appears here:
-```$bios.Version```
+
+```
+$bios.Version
+```
 
 
 ### Calling WMI Methods on WMI Classes
