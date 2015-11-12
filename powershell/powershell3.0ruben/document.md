@@ -48,8 +48,9 @@ The policy affects all the users of the machine
 To sort the output from a cmdlet, you have to use pipelines.
 The ```Get-Process``` command shows a nice table view of process information. 
 The default view appears in ascending alphabetical process name order. 
-If you want to sort the process information on for example virtual memory, then you can use the pipeline below:
-```Get-Process | Sort-Object -Property VM -Descending```
+If you want to sort the process information on for example virtual memory, 
+then you can use the pipeline: ```Get-Process | Sort-Object -Property VM -Descending```.
+A tip: the command ```Sort``` is an alias for ```Sort-Object```
 
 //AFB 1//
 
