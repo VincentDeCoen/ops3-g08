@@ -48,7 +48,7 @@ function CreateOU{
 
 #CSV Import
 function Add-Users {
-    $Users = Import-CSV -Delimiter "," -Path ".\AssengraafPersoneel.csv" 
+    $Users = Import-CSV -Delimiter "," -Path ".\AsCSV.csv" 
 	ForEach($User in $Users) {
         $i++
 	    $DisplayName = $User.GivenName + " " + $User.Surname
