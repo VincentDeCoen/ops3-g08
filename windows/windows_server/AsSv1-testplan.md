@@ -1,4 +1,4 @@
-## Testplan en -rapport taak 1: (titel)
+## Testplan en -rapport Windows Server
 
 * Verantwoordelijke uitvoering: Ruben Piro
 * Verantwoordelijke testen: Vincent De Coen
