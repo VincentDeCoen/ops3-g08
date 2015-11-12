@@ -36,4 +36,10 @@
 
 |Cmdlet|Description|
 |------|-----------|
+|Get-Process \| Sort-Object -Property VM | Sorts the output of the Get-Process command, on virtual memory|
+|Get-Service \| Sort-Object status \| Group-Object -Property status| Groups objects, after sorting|
+|Get-HotFix \| Where installedon -gt 12/1/12 \| sort installedon| Shows the installed hotfixes afther December 1 2012|
 
+## Chapter 4: Formatting output
+----------------------------------------------
+|Get-Process \| Format-List -Property VM| Creates a list|
