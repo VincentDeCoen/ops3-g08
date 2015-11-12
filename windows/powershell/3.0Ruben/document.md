@@ -2,6 +2,17 @@
 ------------------------------
 ###### Author: Ruben
 
+###Table of Contents
+####1 Setting The Script Execution Policy
+#####1.1 A Policy
+#####1.2 The Scope of a Policy
+####2 Sorting, Grouping, Filtering
+##### 2.1 Sorting output from a cmdlet
+#####2.2 Grouping afther sorting
+##### 2.3 Filtering output from one cmdlet
+#### 3 Formatting Output
+####4 Powershell Remoting
+#####4.1 Configuring Remoting
 
 ### 1 Setting the Script Execution Policy
 ---------------------------------------
@@ -56,7 +67,7 @@ A tip: the command `Sort` is an alias for `Sort-Object`.
 
 ![Afbeelding1](/windows/powershell/3.0Ruben/afb/afb1.PNG )
 
-#### 2.2 Grouping afther sorting
+#### 2.2 Grouping after sorting
 ---------------------------------------
 Afther you have sorted the objects through the pipeline, you can group them.
 You can group objects with the ```Group-Object``` command, used in a pipeline with the Sort-Object from above.
@@ -84,3 +95,32 @@ This command returns all hotfixes, installed after December 1, 2012.
 ```|Get-Process | Format-List -Property VM```
 
 ![Afbeelding4](/windows/powershell/3.0Ruben/afb/afb4.PNG )
+
+### 4 Powershell Remoting
+---------------------------------------
+#### 4.1 Configuring Remoting
+------------------------------------------
+Windows Server 2012 installs with Windows Remote Management (WinRm) configured and
+running to support remote Windows PowerShell commands. WinRm is the Microsoft implementation
+of the industry standard WS-Management Protocol. As such, WinRM provides a
+firewall-friendly method of accessing remote systems in an interoperable manner. 
+As soon as Windows Server 2012 is up and
+running, you can make a remote connection and run commands or open an interactive Windows
+PowerShell console. A Windows 8 client, on the other hand, ships with WinRm locked
+down. Therefore, the first step is to use the Enable-PSRemoting function to configure remoting.
+When running the Enable-PSRemoting function, the following steps occur:
+
+
+1. Starts or restarts the WinRM service.
+
+2. Sets the WInRM service startup type to Automatic.
+
+3. Creates a listener to accept requests from any Internet Protocol (IP) address.
+
+4. Enables inbound firewall exceptions for WS_Management traffic.
+
+5. Sets a target listener named Microsoft.powershell.
+
+6. Sets a target listener named Microsoft.powershell.workflow.
+
+7. Sets a target listener named Microsoft.powershell32.
