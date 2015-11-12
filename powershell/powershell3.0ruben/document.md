@@ -41,7 +41,7 @@ The policy affects all the users of the machine
 ######Example:
 ```SetExecutionPolicy -Scope CurrentUser -ExecutionPolicy remotesigned```
 
-### 2 Sorting, Filtering, Grouping
+### 2 Sorting, Grouping, Filtering
 ---------------------------------------
 #### 2.1 Sorting output from a cmdlet
 ---------------------------------------
@@ -50,9 +50,26 @@ The ```Get-Process``` command shows a nice table view of process information.
 The default view appears in ascending alphabetical process name order. 
 If you want to sort the process information on for example virtual memory, 
 then you can use the pipeline: ```Get-Process | Sort-Object -Property VM -Descending```.
-A tip: the command ```Sort``` is an alias for ```Sort-Object```
+
+A tip: the command `Sort` is an alias for `Sort-Object`.
 
 //AFB 1//
 
-#### 2.1 Sorting output from a cmdlet
+#### 2.2 Grouping afther sorting
 ---------------------------------------
+Afther you have sorted the objects through the pipeline, you can group them.
+You can group objects with the ```Group-Object``` command, used in a pipeline with the Sort-Object from above.
+
+Do the following command in the Windows Powershell console:
+```Get-Service | Sort-Object status | Group-Object -Property status```
+
+#### 2.3 Filtering output from one cmdlet
+------------------------------------------
+Sorting and grouping is very useful to create an easy to read overview of the data,
+but we still need something that dives in the data, to show the relevant data in very short time.
+To achieve this, we need to use filters. 
+
+#### Example
+```Get-HotFix | Where installedon -gt 12/1/12```
+This command returns all hotfixes, installed after December 1, 2012.
+
