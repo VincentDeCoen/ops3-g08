@@ -42,4 +42,7 @@
 
 ## Chapter 4: Formatting output
 ----------------------------------------------
-|Get-Process \| Format-List -Property VM| Creates a list|
+|Cmdlet|Description|
+|------|-----------|
+|Get-Process \| Format-List -Property VM| Creates a list of the virtual memories|
+
