@@ -1,11 +1,11 @@
 ###AsSv1
 
 
-######Script: AsScript.ps1
+#####Script: AsScript.ps1
 
-######CSV-bestand: AsCSV.csv
+#####CSV-bestand: AsCSV.csv
 
-bronnen:
+######bronnen:
 
 desired state: https://gallery.technet.microsoft.com/scriptcenter/xActiveDirectory-f2d573f3
 
