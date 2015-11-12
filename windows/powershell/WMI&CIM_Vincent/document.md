@@ -678,28 +678,51 @@ instance methods directly.
 1. Log on to your computer with a user account that does not have administrator rights.
 2. Open the Windows PowerShell console.
 3. Start five copies of Notepad. The command appears here:
+
 ```1..5 | % {notepad}```
+
 4. Use the Get-WmiObject cmdlet to retrieve all instances of the notepad.exe process. The command
 appears here:
+
 ```gwmi win32_process -Filter "name = 'notepad.exe'"```
+
 5. Now pipeline the resulting objects to the Remove-WmiObject cmdlet.
+
 ```gwmi win32_process -Filter "name = 'notepad.exe'" | Remove-WmiObject```
+
 6. Start five instances of notepad. The command appears here:
+
 ```1..5 | % {notepad}```
+
 7. Use the up arrow key to retrieve the Get-WmiObject command that retrieves all instances of
 Notepad.exe. The command appears here:
+
 ```gwmi win32_process -Filter "name = 'notepad.exe'"```
+
 8. Store the returned WMI objects in a variable named $process. This command appears here:
+
 ```$process = gwmi win32_process -Filter "name = 'notepad.exe'"```
+
 9. Call the terminate method from the $process variable. The command appears here:
-```$process.terminate()```
+
+```
+$process.terminate()
+```
+
 10. Start five copies of notepad back up. The command appears here:
-```1..5 | % {notepad}```
+
+```
+1..5 | % {notepad}
+```
+
 11. Use the up arrow key to retrieve the Get-WmiObject command that retrieves all instances of
 Notepad.exe. The command appears here:
+
 ```gwmi win32_process -Filter "name = 'notepad.exe'"```
+
 12. Call the terminate method from the above expression. Put parentheses around the expression,
 and use dotted notation to call the method. The command appears here:
+
 ```(gwmi win32_process -Filter "name = 'notepad.exe'").terminate()```
 
 
@@ -711,26 +734,40 @@ To do this, you can right-click the Windows PowerShell console shortcut and sele
 Administrator from the menu.
 2. Create a test folder off of the root named testshare. Here is the command using the MD alias
 for the mkdir function:
+
 ```MD c:\testshare```
+
 3. Create the Win32_Share object and store it in a variable named $share. Use the [wmiclass]
 type accelerator. The code appears here:
+
 ```$share = [wmiclass]"win32_share"```
+
 4. Call the static create method from the Win32_Share object stored in the $share variable. The
 arguments are path, name, type, maximumallowed, description, password, and access. However,
 you only need to supply the first three. type is 0, which is a disk drive share. The syntax of the
 command appears here:
-```$share.Create("C:\testshare","testshare",0)```
+
+```
+$share.Create("C:\testshare","testshare",0)
+```
+
 5. Use the Get-WmiObject cmdlet and the Win32_Share class to verify that the share was properly
 created. The syntax of the command appears here:
+
 ```gwmi win32_share```
+
 6. Now add a filter so that the Get-WmiObject cmdlet only returns the newly created share. The
 syntax appears here:
+
 ```gwmi win32_share -Filter "name = 'testshare'"```
 7. Remove the newly created share by pipelining the results of the previous command to the
 Remove-WmiObject cmdlet. The syntax of the command appears here:
+
 ```gwmi win32_share -Filter "name = 'testshare'" | Remove-WmiObject```
+
 8. Use the Get-WmiObject cmdlet and the Win32_Share WMI class to verify that the share was
 properly removed. The command appears here:
+
 ```gwmi win32_share```
 
 ### Using the CIM Cmdlets
