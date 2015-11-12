@@ -24,9 +24,9 @@
 
 ### Vincent De Coen
 
-* ...
+* Powershell Boek: Microsoft Press Windows PowerShell 3.0, Step by Step (2013) 
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w08/Week08Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
