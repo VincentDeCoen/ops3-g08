@@ -64,7 +64,8 @@ The Get-WmiObject cmdlet returns a collection of management objects.
 Because of nesting (one namespace inside another namespace) the Get-WmiObject command returns portion
  of the namespaces on the computer. To avoid this situation, we can make a function:
  
- ```Get-WmiNameSpace
+ ```
+ Get-WmiNameSpace
 Function Get-WmiNameSpace
 {
 Param(
@@ -74,7 +75,8 @@ $computer = "localhost"
 Get-WmiObject -class __NameSpace -computer $computer `
 -namespace $namespace -ErrorAction "SilentlyContinue" |
 Foreach-Object `
--Process```
+-Process
+```
 
 This function does the following: The **Get-WmiObject cmdlet** queries WMI. The **class parameter** 
 limits the WMI query to the
