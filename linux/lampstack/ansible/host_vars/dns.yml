@@ -5,15 +5,15 @@ bind_zone_hosts:
   - name: 'dns'
     ip: 192.168.56.10
     aliases:
-      - dns
+      - ns
   - name: 'monitoring'
     ip: 192.168.56.70
     aliases:
-      - monitoring
+      - mon
   - name: 'lampstack'
     ip: 192.168.56.77
     aliases:
-      - lampstack
+      - ls
 bind_allow_query:
   - 'any'
 bind_listen_ipv4: 
