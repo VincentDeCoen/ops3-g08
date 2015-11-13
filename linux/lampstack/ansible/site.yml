@@ -33,3 +33,10 @@
         state: stopped
   roles:
     - bertvv.collectd
+    
+- hosts: dns
+  sudo: true
+  roles:
+    - bertvv.el7
+    - bertvv.bind
+

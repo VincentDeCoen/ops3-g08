@@ -1,3 +1,4 @@
+```Bash
 # Custom filters for handling IP addresses
 
 
@@ -32,3 +33,5 @@ class FilterModule(object):
             'reverse_dotted_decimals': reverse_dotted_decimals,
             'reverse_lookup_zone': reverse_lookup_zone,
         }
+
+```
