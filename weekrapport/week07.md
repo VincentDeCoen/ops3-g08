@@ -94,6 +94,9 @@
 ## Feedback analyseluik
 
 ### Algemeen
+Josey afwezig --> werk volgende wek controleren
+
+Ruben en vincent hebben goed werk geleverd. Samenvatting van boek en bijhorend cheatsheet. Ruben heeft scripts uitgewerkt voor de tweede opdracht. Virtual Academy.
 
 ### Vincent De Coen
 ### Ruben Piro
