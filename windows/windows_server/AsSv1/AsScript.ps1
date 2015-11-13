@@ -3,6 +3,9 @@
 #Rename the machine
 $newname = "AsSv1"
 	Rename-Computer -NewName $newname -force
+
+#restart the computer
+	Restart-Computer
 	
 #Set a static ip
 function SetIP{
