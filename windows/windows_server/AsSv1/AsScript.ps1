@@ -15,7 +15,7 @@ function SetIP{
 	$ipgw = "192.168.0.1"
 	$ipdns = "192.168.0.10"
 	$ipif = (Get-NetAdapter).ifIndex
-	New-NetIPAddress -IPAddress $ipaddress -InterfaceAlias "AssengraafConnectie" -PrefixLength $ipprefix `
+	New-NetIPAddress -IPAddress $ipaddress -InterfaceAlias "AssengraafConnectie" -PrefixLength $ipprefix 
 	-InterfaceIndex $ipif -DefaultGateway $ipgw
 }
 
