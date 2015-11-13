@@ -24,7 +24,7 @@
 
 ### Vincent De Coen
 
-* Powershell Boek: Microsoft Press Windows PowerShell 3.0, Step by Step (2013) 
+* Powershell Boek: Microsoft Press Windows PowerShell 3.0, Step by Step (2013)
 
 ![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w08/Week08Vincent.PNG "tijdregistratie individueel Vincent")
 
@@ -50,9 +50,11 @@ Linux:
 
 ### Birgit Croux
 
-* ...
+* Troubleshooting Graphite-installatie
+* Powershell-documentatie: network shares en storage
+* Statistiek voor performance testing [(literatuur)](https://msdn.microsoft.com/en-us/library/bb924370.aspx)
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w08/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
