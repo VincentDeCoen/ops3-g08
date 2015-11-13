@@ -15,12 +15,13 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w08/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Lezen voor de Powershell-documentatie
+* Script voor minimumvereisten opdracht Windows Server afgewerkt
+* Troubleshooting Graphite
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w08/togglteam.PNG "toggl team")
 
 ### Vincent De Coen
 
@@ -74,8 +75,7 @@ Linux:
 
 ## Waar hebben jullie nog problemen mee?
 
-* ...
-* ...
+* Installatie Graphite werkt niet.
 
 ## Feedback technisch luik
 
