@@ -41,4 +41,59 @@ int range fa0/1-24, g0/1-2
 shut
 ```
 ####Configuring the VLAN's
+#####S1
+######Creating VLAN 10 and VLAN 99 
+```
+exit
+vlan 10
+name User
+vlan 99
+name Management
+```
+######Enable user ports in accessmode
+```
+exit
+int fa0/6
+switchport mode access
+switchport access vlan 10
+int range fa0/1,fa0/3
+switchport mode trunk
+switchport trunk native vlan 99
+```
 
+#####S2
+######Creating VLAN 10 and VLAN 99 
+```
+exit
+vlan 10
+name User
+vlan 99
+name Management
+```
+######Enable user ports in accessmode
+```
+exit
+int range fa0/1,fa0/3
+switchport mode trunk
+switchport trunk native vlan 99
+```
+
+#####S3
+######Creating VLAN 10 and VLAN 99 
+```
+exit
+vlan 10
+name User
+vlan 99
+name Management
+```
+######Enable user ports in accessmode
+```
+exit
+int fa0/18
+switchport mode access
+switchport access vlan 10
+int range fa0/1,fa0/3
+switchport mode trunk
+switchport trunk native vlan 99
+```
