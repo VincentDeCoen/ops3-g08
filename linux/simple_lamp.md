@@ -27,7 +27,7 @@ De blog is te bezoeken op 192.168.56.77/wordpress/ (wanneer de server draait, ui
           wordpress_user: wordpress_usr
           wordpress_password: 1OjejAfPod
 
-* Als de WordPress-site op een machine met een ander IP moet opgezet worden, moet je in wpdump.sql de juiste site-url en home-url invoeren bij de data voor tabel wp_options.  
+* Als de WordPress-site op een machine met een ander IP moet opgezet worden, moet je in wpdump.sql de **juiste site-url en home-url** invoeren bij de data voor tabel wp_options.  
 
           --
           -- Dumping data for table `wp_options`

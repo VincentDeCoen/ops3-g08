@@ -14,11 +14,15 @@ bind_zone_hosts:
     ip: 192.168.56.77
     aliases:
       - ls
+  - name: 'lempstack'
+    ip: 192.168.56.66
+    aliases:
+      - lemp
 bind_allow_query:
   - 'any'
-bind_listen_ipv4: 
+bind_listen_ipv4:
   - 'any'
-bind_listen_ipv6: 
+bind_listen_ipv6:
   - 'any'
 bind_zone_name_servers:
   - 'dns'

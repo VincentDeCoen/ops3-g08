@@ -1,14 +1,16 @@
 ## DNS
+
 ### Stappenplan om de DNS op te zetten
+
 In Vagrant_hosts.yml bijvoegen:
 ```
 - name: dns
   ip: 192.168.56.10
-``` 
+```
 
 In Site.yml bijvoegen:
 
-``` 
+```
 - hosts: dns
   sudo: true
   roles:
@@ -37,9 +39,9 @@ bind_zone_hosts:
       - ls
 bind_allow_query:
   - 'any'
-bind_listen_ipv4: 
+bind_listen_ipv4:
   - 'any'
-bind_listen_ipv6: 
+bind_listen_ipv6:
   - 'any'
 bind_zone_name_servers:
   - 'dns'
@@ -54,4 +56,4 @@ el7_firewall_allow_services:
   - http
   - https
   - dns
-``` 
+```
