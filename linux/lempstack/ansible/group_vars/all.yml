@@ -1,0 +1,26 @@
+# group_vars/all.yml
+
+---
+
+el7_repositories:
+  - epel-release
+
+el7_install_packages:
+  - bash-completion
+  - tree
+  - vim-enhanced
+  - bind-utils
+  - git
+  - nano
+  - wget
+
+# allow traffic on collectd network plugin port
+el7_firewall_allow_ports:
+      - 25826/udp
+      - 25827/udp
+el7_firewall_allow_services:
+  - http
+  - https
+
+# collectd server address
+collectd_server: 192.168.56.70
