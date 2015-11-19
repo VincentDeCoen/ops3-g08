@@ -22,7 +22,6 @@ en
 conf t
 hostname S1
 int range fa0/1-24, g0/1-2
-shutdown
 ```
 #####S2
 ```
@@ -30,7 +29,6 @@ en
 conf t
 hostname S2
 int range fa0/1-24, g0/1-2
-shut
 ```
 #####S3
 ```
@@ -38,7 +36,6 @@ en
 conf t
 hostname S3
 int range fa0/1-24, g0/1-2
-shut
 ```
 ####Configuring the VLAN's
 #####S1
@@ -56,11 +53,19 @@ exit
 int fa0/6
 switchport mode access
 switchport access vlan 10
+no shutdown
 int range fa0/1,fa0/3
 switchport mode trunk
 switchport trunk native vlan 99
+no shutdown
 ```
-
+###### IP Settings VLAN's
+```
+conf t
+int vlan 99
+ip address 192.168.1.11 255.255.255.0
+no shutdown
+```
 #####S2
 ######Creating VLAN 10 and VLAN 99 
 ```
@@ -76,8 +81,15 @@ exit
 int range fa0/1,fa0/3
 switchport mode trunk
 switchport trunk native vlan 99
+no shutdown
 ```
-
+###### IP Settings VLAN's
+```
+conf t
+int vlan 99
+ip address 192.168.1.12 255.255.255.0
+no shutdown
+```
 #####S3
 ######Creating VLAN 10 and VLAN 99 
 ```
@@ -93,7 +105,16 @@ exit
 int fa0/18
 switchport mode access
 switchport access vlan 10
+no shutdown
 int range fa0/1,fa0/3
 switchport mode trunk
 switchport trunk native vlan 99
+no shutdown
+```
+###### IP Settings VLAN's
+```
+conf t
+int vlan 99
+ip address 192.168.1.13 255.255.255.0
+no shutdown
 ```
