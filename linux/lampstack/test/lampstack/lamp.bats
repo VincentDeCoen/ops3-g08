@@ -9,9 +9,9 @@
 
 #}}}
 #{{{ Variables
-sut=192.168.56.10
+sut=192.168.56.77
 mariadb_root_password=yagnolhu9OlOthUl
-wordpress_database=wordpress-db
+wordpress_database=wordpress_db
 wordpress_user=wordpress_usr
 wordpress_password=1OjejAfPod
 #}}}
@@ -78,9 +78,9 @@ wordpress_password=1OjejAfPod
 }
 
 
-@test "The Wordpress install page should be visible under http://${sut}/wordpress/" {
+@test "The Don't read me blog should be visible under http://${sut}/wordpress/" {
 
-  [ -n "$(curl --silent --location http://${sut}/wordpress/ | grep '<title>WordPress')" ]
+  [ -n "$(curl --silent --location http://${sut}/wordpress/ | grep '<title>Don')" ]
 }
 
 @test 'MariaDB should not have a test database' {
