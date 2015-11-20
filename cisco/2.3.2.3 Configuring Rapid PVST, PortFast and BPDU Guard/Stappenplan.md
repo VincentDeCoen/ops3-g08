@@ -118,3 +118,34 @@ int vlan 99
 ip address 192.168.1.13 255.255.255.0
 no shutdown
 ```
+
+#####Check the configurations and connectivity
+- show vlan brief
+- show interfaces trink
+- show running-config
+
+####Configure the Root Bridge and Examine PVST+ Convergence
+#####Configure primary root bridge S2
+```
+spanning-tree vlan 1 root primary
+spanning-tree vlan 10 root primary
+spanning-tree vlan 99 root primary
+```
+
+#####Configure secondary root bridge S1
+```
+spanning-tree vlan 1 root secondary
+spanning-tree vlan 10 root secondary
+spanning-tree vlan 99 root secondary
+```
+
+#####Debug the spanning tree (S3)
+the command ```debug spanning-tree events``` didn't do anything at all.
+```
+en
+conf t
+int fa0/1
+shutdown
+```
+
+####Configure Rapid PVST+, PortFast, BPDU Guard, and Examine Convergence
