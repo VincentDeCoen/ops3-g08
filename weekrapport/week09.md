@@ -1,15 +1,15 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 09
 
 * Groep: g08
-* Datum:
+* Datum: 21/11/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |  ja     |           |
+| Ruben Piro |   ja    |           |
+| Robbe Van Daele |   nee    |           |
+| Birgit Croux |    ja   |           |
+| Josey De Smet |   ja   |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -26,15 +26,23 @@
 
 ### Vincent De Coen
 
-* ...
+* Linux: DNS server + bijhorend testplan
+* Linux: Cisco labo
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week09Vincent.PNG "Tijdsregistratie Vincent")
 
 ### Ruben Piro
 
-* ...
+* Cisco: Labo 2.3.2.3 Configuring Rapid PVST+, PortFast and BPDU Guard.  
+ - Packet Tracer oplossing
+ - volledig stappenplan 
 
-[Afbeelding individueel rapport tijdregistratie]
+* Windows Server:  
+  - Debuggen en aanpassen windows server script
+
+* Powershell: Basiscommando's i.v.m. functies toegevoegd.
+
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week09Ruben.PNG "Tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
@@ -60,6 +68,8 @@
 
 ### Algemeen
 ### Vincent De Coen
+* Cisco labo's
+* Linux opdrachten
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux

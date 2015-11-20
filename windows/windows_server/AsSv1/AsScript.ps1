@@ -11,12 +11,11 @@ $newname = "AsSv1"
 function SetIP{
     Add-windowsfeature RSAT-AD-Tools
     $ipaddress = "192.168.210.11"
-	$ipprefix = "24"
-	$ipgw = "192.168.0.1"
-	$ipdns = "192.168.210.11"
-	$ipif = (Get-NetAdapter).ifIndex
-	new-NetIPAddress -IPAddress $ipaddress -InterfaceAlias "AssengraafConnectie" -PrefixLength $ipprefix 
-	-InterfaceIndex $ipif -DefaultGateway $ipgw
+    $ipprefix = "24"
+    $ipgw = "192.168.210.1"
+    $ipdns = "192.168.210.11"
+    $IntAlias = "Ethernet"
+    New-NetIPAddress -IPAddress $ipaddress -Interfacealias $IntAlias -PrefixLength $ipprefix -DefaultGateway $ipgw
 }
 
 #AD
