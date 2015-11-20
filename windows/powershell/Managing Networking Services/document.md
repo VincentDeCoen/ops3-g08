@@ -60,7 +60,11 @@ of configuring an additional address:
 locations than the default gateway. Say for instance, there are two routers on your
 network: the default gateway and a second gateway. The second gateway is used
 to access the 10.10.20.0/24 network, and the Windows server needs to be
-configured to route to it
+configured to route to it. By executing the New-NetRoute command again, with the -DestinationPrefix
+and -NextHop addresses changed appropriately, we add a specific route to the
+server:
+``` New-NetRoute -DestinationPrefix "10.10.20.0/24" -NextHop
+"10.10.10.254" -InterfaceAlias Ethernet ```
 
 ###Installing domaincontrollers
 
