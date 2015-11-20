@@ -15,6 +15,10 @@
 #### 3 Formatting Output
 ####4 Powershell Remoting
 #####4.1 Configuring Remoting
+####5 Functions
+####5.1 Creating a function
+####5.2 Using multiple input parameters
+
 
 ### 1 Setting the Script Execution Policy
 
@@ -160,3 +164,46 @@ When running the Enable-PSRemoting function, the following steps occur:
 6. Sets a target listener named Microsoft.powershell.workflow.
 
 7. Sets a target listener named Microsoft.powershell32.
+
+###5. Functions
+####5.1 Creating a function
+1) choose a good functionname.
+   The function is going to retrieve information, so the best verb to use, 
+is a verb that is already in the listing of the cmdlets verbs (best practice)
+```
+Function Function-Name
+{
+  #insert your code here
+}
+```
+To execute script, use the command ```get-'functionname'```
+
+
+####5.2 Using multiple input parameters
+To use multiple input parameters, it's a best practise to modify the way the 
+function is structured. This is a visual change that makes the function easier to read.
+In the function pattern shown below, the function accepts three input parameters.
+
+```
+	Function Function-Name
+	{
+	Param(
+	[int]$Parameter1,
+	[String]$Parameter2 = "DefaultValue",
+	$Parameter3
+	)
+	#Function code goes here
+	} #end Function-Name
+```
+
+another example
+```
+	Function Format-IPOutput($IP)
+	{
+	"IP Address: " + $IP.IPAddress[0]
+	"Subnet: " + $IP.IPSubNet[0]
+	"GateWay: " + $IP.DefaultIPGateway
+	"DNS Server: " + $IP.DNSServerSearchOrder[0]
+	"FQDN: " + $IP.DNSHostName + "." + $IP.DNSDomain
+	} #end Format-IPOutput
+```
