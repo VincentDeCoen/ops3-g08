@@ -1,4 +1,4 @@
-#Cheatsheet Windows powershell cookbook 2013
+#Windows powershell cookbook 2013
 --------------------------------------------
 ###### Author: Josey
 --------------------
