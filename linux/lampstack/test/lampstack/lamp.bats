@@ -9,11 +9,11 @@
 
 #}}}
 #{{{ Variables
-sut=192.0.2.50
-mariadb_root_password=Teilvadci
-wordpress_database=wordpress
-wordpress_user=wordpressusr
-wordpress_password=BulpashCod
+sut=192.168.56.10
+mariadb_root_password=yagnolhu9OlOthUl
+wordpress_database=wordpress-db
+wordpress_user=wordpress_usr
+wordpress_password=1OjejAfPod
 #}}}
 
 # Test cases
@@ -77,25 +77,9 @@ wordpress_password=BulpashCod
   [ -z "$(echo ${output} | grep 404)" ]
 }
 
-@test 'The website should be accessible through HTTPS' {
-  # We're just checking if port 443 is open here. If HTTP runs and serves pages, HTTPS should as well
-  # We check the open TCP server ports with ss and check if port 443 is listed.
-  [ -n "$(ss -tln | grep '\b443\b')" ]
-}
-
-@test 'The certificate should not be the default one' {
-  # Fetch the server certificate
-  run openssl s_client -showcerts -connect ${sut}:443 < /dev/null
-
-  [ "0" -eq "${status}" ]
-
-  # The default certificate for Apache has "SomeOrganization" as the organization
-  # So grepping it in the output of the openssl command should return an empty string
-  # if a self-signed certificate was installed by the administrator.
-  [ -z "$(echo ${output} | grep SomeOrganization)" ]
-}
 
 @test "The Wordpress install page should be visible under http://${sut}/wordpress/" {
+
   [ -n "$(curl --silent --location http://${sut}/wordpress/ | grep '<title>WordPress')" ]
 }
 
