@@ -20,3 +20,7 @@ Uitvoerder(s) test: Vincent
 - Om de Monitoring server te bekijken surfen we naar 192.168.56.70/collectd/
   - We krijgen de monitoring service te zien. We kunnen een server kiezen alsook de data die we wensen te zien (cpu, interface, load, memory)
     - We testen de Lamp webserver simpel door zeer snel pagina's te openen op de website(rechtsklik openen op nieuw tabblad). We zien een kleine piek in de monitoring grafieken.
+-  Om de DNS server te testen zullen we via het hostsysteem werken. Eerst gaan we in de Windows Cmd een de DNS pingen en daarna een NSLookup commando doen.
+  - ping 192.168.56.10
+  - nslookup testdomein.lan 192.168.56.10
+De ping werkt en de nslookup geeft de gevraagde informatie terug. 
