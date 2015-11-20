@@ -29,7 +29,7 @@
 * Linux: DNS server + bijhorend testplan
 * Linux: Cisco labo
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week09Vincent.PNG "Tijdsregistratie Vincent")
 
 ### Ruben Piro
 
