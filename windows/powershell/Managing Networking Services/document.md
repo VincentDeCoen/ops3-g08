@@ -9,16 +9,22 @@
 1. Find the **interface** to set by executing ```Get-NetIPInterface```
 
 2. Set the **IP information** using New-NetIPAddress:
-``` New-NetIPAddress -AddressFamily IPv4 -IPAddress 10.10.10.10
--PrefixLength 24 -InterfaceAlias Ethernet```
+```
+New-NetIPAddress -AddressFamily IPv4 -IPAddress 10.10.10.10
+-PrefixLength 24 -InterfaceAlias Ethernet
+```
 
 3. Set **DNS Servers** using Set-DnsClientServerAddress:
-``` Set-DnsClientServerAddress -InterfaceAlias Ethernet
--ServerAddresses "10.10.10.10","10.10.10.11" ```
+```
+Set-DnsClientServerAddress -InterfaceAlias Ethernet
+-ServerAddresses "10.10.10.10","10.10.10.11" 
+```
 
 4. Set the **default route** using New-NetRoute:
-``` New-NetRoute -DestinationPrefix "0.0.0.0/0" -NextHop "10.10.10.1"
--InterfaceAlias Ethernet```
+```
+New-NetRoute -DestinationPrefix "0.0.0.0/0" -NextHop "10.10.10.1"
+-InterfaceAlias Ethernet
+```
 
 How it works...
 In the **first step** we list out the network adapters available on the server. Windows Servers often
@@ -53,8 +59,11 @@ Set-DnsClientServerAddress -InterfaceAlias Ethernet `
 can be configured with multiple IP addresses simultaneously. This configuration is
 often used for clustering or load balancing within Windows. Following is an example
 of configuring an additional address:
-```New-NetIPAddress -AddressFamily IPv4 -IPAddress 10.10.10.250
--PrefixLength 24 -InterfaceAlias Ethernet```
+
+```
+New-NetIPAddress -AddressFamily IPv4 -IPAddress 10.10.10.250
+-PrefixLength 24 -InterfaceAlias Ethernet
+```
 
 3. Additional routes: Windows has the ability to route network packets to more
 locations than the default gateway. Say for instance, there are two routers on your
@@ -63,23 +72,31 @@ to access the 10.10.20.0/24 network, and the Windows server needs to be
 configured to route to it. By executing the New-NetRoute command again, with the -DestinationPrefix
 and -NextHop addresses changed appropriately, we add a specific route to the
 server:
-``` New-NetRoute -DestinationPrefix "10.10.20.0/24" -NextHop
-"10.10.10.254" -InterfaceAlias Ethernet ```
+```
+New-NetRoute -DestinationPrefix "10.10.20.0/24" -NextHop
+"10.10.10.254" -InterfaceAlias Ethernet 
+```
 
 ###Installing domaincontrollers
 
 Carry out the following steps to install the domain controller:
 1. As an administrator, open a PowerShell.
 2. Identify the Windows Features to install:
-``` Get-WindowsFeature | Where-Object Name -like *domain*
-Get-WindowsFeature | Where-Object Name -like *dns* ```
+``` 
+Get-WindowsFeature | Where-Object Name -like *domain*
+Get-WindowsFeature | Where-Object Name -like *dns* 
+```
 3. Install the necessary features:
-``` Install-WindowsFeature AD-Domain-Services, DNS –
-IncludeManagementTools```
+``` 
+Install-WindowsFeature AD-Domain-Services, DNS –
+IncludeManagementTools
+```
 4. Configure the domain:
-``` $SMPass = ConvertTo-SecureString 'P@$$w0rd11' –AsPlainText -Force
+``` 
+$SMPass = ConvertTo-SecureString 'P@$$w0rd11' –AsPlainText -Force
 Install-ADDSForest -DomainName corp.contoso.com –
-SafeModeAdministratorPassword $SMPass –Confirm:$false ```
+SafeModeAdministratorPassword $SMPass –Confirm:$false 
+```
 
 How it works...
 The **first step** executes the Get-WindowsFeature Cmdlet to list the features necessary
@@ -108,7 +125,6 @@ administrator", $secString
 Add-Computer -DomainName "corp.contoso.com" -Credential $myCred –
 NewName "CORPDC2" –Restart
 ```
-
 Similar to creating the domain, first a $secString variable is created to hold a
 secure copy of the password that will be used to join the computer to the domain.
 Then a $myCred variable is created to convert the username/password combination
@@ -144,26 +160,38 @@ are executed remotely to promote the server to a domain controller and reboot.
 ###Configuring Zones
 Carry out the following steps to configure **zones** in DNS:
 1. Identify features to install:
-``` Get-WindowsFeature | Where-Object Name -like *dns* ```
+```
+Get-WindowsFeature | Where-Object Name -like *dns* 
+```
 2. Install DNS feature and tools (if not already installed):
-``` Install-WindowsFeature DNS -IncludeManagementTools –
-IncludeAllSubFeature ```
+``` 
+Install-WindowsFeature DNS -IncludeManagementTools –
+IncludeAllSubFeature 
+```
 3. Create a reverse lookup zone:
-``` Add-DnsServerPrimaryZone –Name 10.10.10.in-addr.arpa –
+``` 
+Add-DnsServerPrimaryZone –Name 10.10.10.in-addr.arpa –
 ReplicationScope Forest
 Add-DnsServerPrimaryZone –Name 20.168.192.in-addr.arpa –
-ReplicationScope Forest ```
+ReplicationScope Forest 
+```
 4. Create a primary zone and add static records:
-``` Add-DnsServerPrimaryZone –Name contoso.com –ZoneFile contoso.com.
+``` 
+Add-DnsServerPrimaryZone –Name contoso.com –ZoneFile contoso.com.
 dns
 Add-DnsServerResourceRecordA –ZoneName contoso.com –Name www –
-IPv4Address 192.168.20.54 –CreatePtr ```
+IPv4Address 192.168.20.54 –CreatePtr 
+```
 5. Create a conditional forwarder:
-``` Add-DnsServerConditionalForwarderZone -Name fabrikam.com
--MasterServers 192.168.99.1 ```
+``` 
+Add-DnsServerConditionalForwarderZone -Name fabrikam.com
+-MasterServers 192.168.99.1 
+```
 6. Create a secondary zone:
-``` Add-DnsServerSecondaryZone -Name corp.adatum.com -ZoneFile corp.
-adatum.com.dns -MasterServers 192.168.1.1 ```
+``` 
+Add-DnsServerSecondaryZone -Name corp.adatum.com -ZoneFile corp.
+adatum.com.dns -MasterServers 192.168.1.1
+```
 
 How it works...
 The **first two steps** may have already been completed if your DNS server coexists on the
@@ -193,7 +221,7 @@ master server, and then replicated to the secondary.
 
 ####Additional features zones in dns
 1. Listing all zones: A full list of DNS zones on a server can be returned by executing
-the Get-DnsServerZone function:
+the ``` Get-DnsServerZone ``` function.
 2. Updating DNS records: When updating static records there are two options: delete
 and recreate, and update. The following is a simple function that gets a current
 resource record from DNS, updates it, and commits it back to DNS:
@@ -221,9 +249,10 @@ Write-Host "New Value: " (Get-DnsServerResourceRecord
 ```
 
 ###Configuring DHCP SCOPES
-Carry out the following steps to configure DHCP scopes:
+Carry out the following steps to configure **DHCP scopes**:
 1. Install DHCP and management tools:
-```Get-WindowsFeature | Where-Object Name -like *dhcp*
+```
+Get-WindowsFeature | Where-Object Name -like *dhcp*
 Install-WindowsFeature DHCP -IncludeManagementTools
 ```
 2. Create a DHCP scope
@@ -285,7 +314,9 @@ Carry out the following steps to configure DHCP server failover:
 Install-WindowsFeature dhcp -IncludeAllSubFeature -ComputerName
 corpdc2
 2. Authorize DHCP on the second server:
+```
 Add-DhcpServerInDC -DnsName corpdc2.corp.contoso.com
+```
 3. Configure DHCP failover:
 ```
 Add-DhcpServerv4Failover -ComputerName corpdc1 -PartnerServer
