@@ -1,4 +1,5 @@
-# Powershell 3.0 First Steps
+# Powershell Basic Commands
+######uit: Powershell 3.0 First Steps
 
 ------------------------------
 
@@ -18,11 +19,10 @@
 ####5 Functions
 ####5.1 Creating a function
 ####5.2 Using multiple input parameters
+--------------------------------------------------
 
 
 ### 1 Setting the Script Execution Policy
-
----------------------------------------
 
 #### 1.1 A Policy
 
@@ -79,11 +79,10 @@ The policy affects all the users of the machine
 
 ### 2 Sorting, Grouping, Filtering
 
----------------------------------------
 
 #### 2.1 Sorting output from a cmdlet
 
----------------------------------------
+
 
 To sort the output from a cmdlet, you have to use pipelines.
 The ```Get-Process``` command shows a nice table view of process information.
@@ -97,7 +96,7 @@ A tip: the command `Sort` is an alias for `Sort-Object`.
 
 #### 2.2 Grouping after sorting
 
----------------------------------------
+
 
 After you have sorted the objects through the pipeline, you can group them.
 You can group objects with the ```Group-Object``` command, used in a pipeline with the Sort-Object from above.
@@ -109,7 +108,7 @@ Do the following command in the Windows Powershell console:
 
 #### 2.3 Filtering output from one cmdlet
 
-------------------------------------------
+
 
 Sorting and grouping is very useful to create an easy to read overview of the data,
 but we still need something that dives in the data, to show the relevant data in very short time.
@@ -124,7 +123,7 @@ This command returns all hotfixes, installed after December 1, 2012.
 
 ### 3 Formatting Output
 
----------------------------------------
+
 
 #### 3.1 Creating a list
 
@@ -134,11 +133,11 @@ This command returns all hotfixes, installed after December 1, 2012.
 
 ### 4 Powershell Remoting
 
----------------------------------------
+
 
 #### 4.1 Configuring Remoting
 
-------------------------------------------
+
 
 Windows Server 2012 installs with Windows Remote Management (WinRm) configured and
 running to support remote Windows PowerShell commands. WinRm is the Microsoft implementation
