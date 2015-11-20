@@ -15,12 +15,14 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w09/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Verdergewerkt aan samenvattingen PowerShell
+* Cisco-opdrachten 2.3.2.3 en 7.2.2.5
+* LEMP-stack
+* Overhead: experimenteren met pandoc voor integratie samenvattingen
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w09/togglteam.PNG "toggl team")
 
 ### Vincent De Coen
 
@@ -45,7 +47,7 @@
 * LEMP-stack + documentatie
 * Samenvatting PowerShell: printers
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
