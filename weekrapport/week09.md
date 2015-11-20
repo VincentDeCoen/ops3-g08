@@ -22,7 +22,7 @@
 * LEMP-stack
 * Overhead: experimenteren met pandoc voor integratie samenvattingen
 
-![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w09/togglteam.PNG "toggl team")
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w09/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
