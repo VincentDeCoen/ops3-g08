@@ -1,15 +1,15 @@
 # Voortgangsrapport week nn
 
 * Groep: g08
-* Datum:
+* Datum: 21/11/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |  ja     |           |
+| Ruben Piro |   ja    |           |
+| Robbe Van Daele |   nee    |           |
+| Birgit Croux |    ja   |           |
+| Josey De Smet |   ja   |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -26,13 +26,14 @@
 
 ### Vincent De Coen
 
-* ...
+* Linux: DNS server + bijhorend testplan
+* Linux: Cisco labo
 
 [Afbeelding individueel rapport tijdregistratie]
 
 ### Ruben Piro
 
-* ...
+* 
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -60,6 +61,8 @@
 
 ### Algemeen
 ### Vincent De Coen
+* Cisco labo's
+* Linux opdrachten
 ### Ruben Piro
 ### Robbe Van Daele
 ### Birgit Croux
