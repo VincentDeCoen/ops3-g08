@@ -6,7 +6,7 @@
 ### Testplan
 ######Auteur testplan: Ruben Piro
 
-####Testen Met Windows Server 2012 Met GUI (zonder vagrant)
+#### 1)Testen Met Windows Server 2012 Met GUI (zonder vagrant)
   - Start de virtuele machine Windows Server 2012 Gui op (GUI bevat de Guest Additions)
   - Om te testen, plaats je het script ```AsScript.ps1``` en CSV-bestand ```AsCSV.csv``` op het bureaublad.
   - Start Powershell, doe ```cd Desktop``` en voer het commando ```./Desktop/AsScript.ps1``` uit.
@@ -22,6 +22,8 @@
   - [ ] DHCP
   - [ ] OU's (beheer, verzekeringen,...)
   - [ ] De CSV-gebruikers zijn aangemaakt
+  
+#### 2)Testen Met Windows Server 2012 Server Core (Zonder GUI)
 
 ### Testrapport
 
