@@ -33,9 +33,16 @@
 
 ### Ruben Piro
 
-* 
+* Cisco: Labo 2.3.2.3 Configuring Rapid PVST+, PortFast and BPDU Guard.  
+ - Packet Tracer oplossing
+ - volledig stappenplan 
 
-[Afbeelding individueel rapport tijdregistratie]
+* Windows Server:  
+  - Debuggen en aanpassen windows server script
+
+* Powershell: Basiscommando's i.v.m. functies toegevoegd.
+
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week09Ruben.PNG "Tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
