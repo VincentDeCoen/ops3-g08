@@ -8,11 +8,17 @@
 *.ova
 *.vmdk
 
+# BATS installation
+test/bats*
+test/v*tar.gz*
+
 # Hidden Vagrant-directory
 .vagrant
 lampstack/.vagrant
 linux/lampstack/.vagrant
+linux/lempstack/.vagrant
 
 # Ignore role directories from Ansible Galaxy (user.role notation)
 lampstack/ansible/roles/*.*
 linux/lampstack/ansible/roles/*.*
+linux/lempstack/ansible/roles/*.*
