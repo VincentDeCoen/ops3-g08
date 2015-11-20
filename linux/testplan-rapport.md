@@ -1,14 +1,15 @@
-## Testplan en -rapport taak 1: (titel)
+## Testplan en -rapport Simple Lamp
 
 * Verantwoordelijke uitvoering: Birgit
 * Verantwoordelijke testen: Vincent
 
 ### Testplan
 
-Auteur(s) testplan: Vincent
+Auteur(s) testplan: Birgit
 
-- De twee servers, 'lampstack' en 'monitoring', worden opgezet via het 'Vagrant up' commando.
-- Daarna zal naar de webpagina's van de servers gesurft worden om de services te testen.
+- Servers 'lampstack', 'monitoring' en 'dns', worden opgezet via het 'Vagrant up' commando.
+- Op lampstack is een wordpress-blog aanwezig.
+- Op monitoring is de interface van collectd-web zichtbaar.
 
 ### Testrapport
 
@@ -23,4 +24,4 @@ Uitvoerder(s) test: Vincent
 -  Om de DNS server te testen zullen we via het hostsysteem werken. Eerst gaan we in de Windows Cmd een de DNS pingen en daarna een NSLookup commando doen.
   - ping 192.168.56.10
   - nslookup testdomein.lan 192.168.56.10
-De ping werkt en de nslookup geeft de gevraagde informatie terug. 
+De ping werkt en de nslookup geeft de gevraagde informatie terug.
