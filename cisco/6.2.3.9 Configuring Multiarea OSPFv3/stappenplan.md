@@ -1,10 +1,10 @@
 - 3 Cisco 1941 routers maken
 
-Tussen R1 en R2, en R2 en R3 seriële verbindingen maken.
+- Tussen R1 en R2, en R2 en R3 seriÃ«le verbindingen maken.
 
-dan voor R1 en R3 elk een area maken.
+- Voor R1 en R3 elk een area maken.
 
-VOor R2 een groot area maken
+- Voor R2 een groot area maken
 
 #### In router 1
 
