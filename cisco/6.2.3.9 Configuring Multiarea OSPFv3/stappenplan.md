@@ -31,7 +31,7 @@ ipv6 unicast-routing
 end
 sh run conf
 ```
-#### in router 2
+#### In router 2
 ```
 en
 conf t
