@@ -136,3 +136,19 @@ ip ospf message-digest-key 1 md5 cisco123
 ip OSPF authentication message-digest
 ```
 ```show ip ospf neighbor```
+
+####4) Configure Interarea Summary Routes
+```show ip route ospf``` on ALL Routers
+```show ip ospf database```
+
+#####4.1) R1
+```
+router ospf 1
+area 1 range 192.168.0.0 255.255.252.0
+```
+
+#####4.2) R2
+```
+router ospf 1
+area 3 range 192.168.4.0 255.255.252.0
+```
