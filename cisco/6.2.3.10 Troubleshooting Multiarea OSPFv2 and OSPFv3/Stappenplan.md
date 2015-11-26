@@ -37,9 +37,8 @@ ipv6 router ospf 1
 ```
 Volgend commando zullen we **niet** gebruiken daar Packet Tracer dit commando niet ondersteunt:
 
-```
-area 1 range 2001:DB8:ACAD::/61
-```
+**area 1 range 2001:DB8:ACAD::/61**
+
 ```
 ip route 0.0.0.0 0.0.0.0 Loopback0
 banner motd @
