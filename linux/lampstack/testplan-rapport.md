@@ -7,7 +7,7 @@
 
 Auteur(s) testplan: Birgit
 
-- Servers 'lampstack', 'monitoring' en 'dns', worden opgezet via het 'Vagrant up' commando.
+- Servers 'lampstack', 'monitoring' en 'dns', worden opgezet via het 'vagrant up' commando.
 - Op lampstack is een wordpress-blog aanwezig.
 - Op monitoring is de interface van collectd-web zichtbaar.
 
