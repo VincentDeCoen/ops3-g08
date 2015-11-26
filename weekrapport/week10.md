@@ -15,12 +15,14 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w10/kanbanteam.png "huboard team")
 
-* ...
-* ...
+* Cisco-labo's afgewerkt
+* Debuggen en optimaliseren script Windows Server
+* Remote db opdracht linux
+* jmeter: senario's met throughput shaping timer en perfmon
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+![Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht](/weekrapport/media/w10/togglteam.png "toggl team")
 
 ### Vincent De Coen
 
@@ -42,9 +44,10 @@
 
 ### Birgit Croux
 
-* ...
+* Jmeter (scenario's en experimenteren met perfmon)
+* webserver + remote db
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/togglbirgit.png "tijdregistratie individueel birgit")
 
 ### Josey De Smet
 
@@ -64,7 +67,9 @@
 
 ## Waar hebben jullie nog problemen mee?
 
-Webserver met aparte database-server: "error establishing database connection"  
+Webserver met aparte database-server: "error establishing database connection" bij surfen naar de WordPress-pagina.  
+
+Troubleshooting:
 
 Remote verbinding met dezelfde credentials van op command line lukt, verbinden via php-testscript lukt ook.
 
@@ -79,7 +84,7 @@ Remote verbinding met dezelfde credentials van op command line lukt, verbinden v
         ?>
 
 Credentials en db host in wp-config.php:  
-* geprobeerd met variabelen uit de ansible-rol (op het ip van de db host na, exact dezelfde bestanden als in de lempstack, die wel werkt)
+* geprobeerd met variabelen uit de ansible-rol (op het ip van de db host na, copypaste vanuit de lempstack, die wel werkt)
 * geprobeerd met alle gegevens hard-coded
 
 Telkens ook de browsercache gewist bij het opvragen van de homepage.
