@@ -67,28 +67,6 @@
 
 ## Waar hebben jullie nog problemen mee?
 
-Webserver met aparte database-server: "error establishing database connection" bij surfen naar de WordPress-pagina.  
-
-Troubleshooting:
-
-Remote verbinding met dezelfde credentials van op command line lukt, verbinden via php-testscript lukt ook.
-
-        <?php
-        $link = mysql_connect('192.168.56.59', 'wordpress_usr', '1OjejAfPod');
-        if (!$link) {
-        die('Could not connect: ' . mysql_error());
-        }
-        mysql_select_db('wordpress_db') or die ('No database found');
-        echo 'Connected successfully';
-        mysql_close($link);
-        ?>
-
-Credentials en db host in wp-config.php:  
-* geprobeerd met variabelen uit de ansible-rol (op het ip van de db host na, copypaste vanuit de lempstack, die wel werkt)
-* geprobeerd met alle gegevens hard-coded
-
-Telkens ook de browsercache gewist bij het opvragen van de homepage.
-
 
 ## Feedback technisch luik
 
