@@ -58,4 +58,49 @@ ip address 192.168.23.2 255.255.255.252
 no shutdown
 ```
 
-####2) Configuring the Switches
+####2) Verify the settings
+```show ip interface brief```
+
+####3) Configure OSPF 
+#####3.1) R1
+```
+router ospf 1
+router-id 1.1.1.1
+do show ip route connected
+network 192.168.1.0 0.0.0.255 area 1
+network 192.168.2.0 0.0.0.255 area 1
+network 192.168.12.0 0.0.0.3 area 0
+
+passive-interface lo1
+passive-interface lo2
+exit
+ip route 0.0.0.0 0.0.0.0
+router ospf 1
+default-information originate
+```
+
+#####3.2) R2
+```
+router ospf 1
+router-id 2.2.2.2
+do show ip route connected
+network 192.168.6.0 0.0.0.255 area 3
+network 192.168.12.0 0.0.0.3 area 0
+network 192.168.23.0 0.0.0.3 area 3
+passive-interface lo6
+```
+
+#####3.3) R3
+
+```
+router ospf 1
+router-id 3.3.3.3
+do show ip route connected
+network 192.168.4.0 0.0.0.255 area 3
+network 192.168.5.0 0.0.0.255 area 3
+network 192.168.23.0 0.0.0.3 area 3
+passive-interface lo4
+passive-interface lo5
+```
+
+#####3.4) Verify OSPF settings
