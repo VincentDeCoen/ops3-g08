@@ -24,3 +24,6 @@
     name: nginx
     state: started
     enabled: yes
+
+- name: Configure SELinux to allow web server to connect to remote database
+  seboolean: name=httpd_can_network_connect_db state=true persistent=yes
