@@ -18,6 +18,10 @@ bind_zone_hosts:
     ip: 192.168.56.66
     aliases:
       - lemp
+  - name: 'web0'
+    ip: 192.168.56.55
+  - name: 'db'
+    ip: 192.168.56.59
 bind_allow_query:
   - 'any'
 bind_listen_ipv4:

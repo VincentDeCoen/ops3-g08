@@ -1,0 +1,49 @@
+# host_vars/web0.yml
+---
+
+el7_repositories:
+  - epel-release
+
+# Added mysql client package (mariadb)
+el7_install_packages:
+  - bash-completion
+  - tree
+  - vim-enhanced
+  - bind-utils
+  - git
+  - nano
+  - wget
+  - mariadb
+
+el7_firewall_allow_services:
+  - http
+  - https
+el7_firewall_allow_ports:
+  - 80/tcp
+  - 3306/tcp
+  - 25826/udp
+  - 25827/udp
+
+
+# nginx
+# This is used for the nginx server configuration, but access to the
+# WordPress site is not restricted by a named host.
+nginx_port: 80
+server_hostname: 192.168.56.55
+
+
+# wordpress
+wp_version: 4.3
+wp_sha256sum: 3b0db3abe8504f15a33cf64188a493ec0de01eaa8d20e37c3d6a1d9fa0a40fb4
+wp_db_name: wordpress_db
+wp_db_user: wordpress_usr
+wp_db_password: 1OjejAfPod
+wp_db_host: 192.168.56.59
+# Disable All Updates
+# By default automatic updates are enabled, set this value to true to disable all automatic updates
+auto_up_disable: true
+#Define Core Update Level
+# true  = Development, minor, and major updates are all enabled
+# false = Development, minor, and major updates are all disabled
+# minor = Minor updates are enabled, development, and major updates are disabled
+core_update_level: false

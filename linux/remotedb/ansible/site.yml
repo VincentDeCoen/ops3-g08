@@ -1,0 +1,43 @@
+# site.yml
+---
+
+# test: disable firewall
+#- hosts: all
+#  sudo: true
+#  tasks:
+#    - name: Ensure firewall is not running
+#      service:
+#        name: firewalld
+#        state: stopped
+
+- hosts: web0
+  sudo: true
+  roles:
+    - bertvv.collectd
+    - bertvv.el7
+    - common
+    - nginx
+    - php-fpm
+    - wordpress
+
+
+- hosts: db
+  sudo: true
+  roles:
+    - bertvv.el7
+    - bertvv.collectd
+    - common
+    - mariadb
+  post_tasks:
+    - name: Import wordpress database
+      mysql_db:
+        name: wordpress_db
+        state: import
+        target: /vagrant/ansible/roles/common/files/wpdump.sql
+
+
+- hosts: dns
+  sudo: true
+  roles:
+    - bertvv.el7
+    - bertvv.bind

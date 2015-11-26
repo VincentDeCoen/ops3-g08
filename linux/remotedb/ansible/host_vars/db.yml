@@ -1,0 +1,20 @@
+# host_vars/db.yml
+---
+# Database package installation is handled by role mariadb (not by role el7)
+# Allow ports for collectd traffic and mariadb
+el7_firewall_allow_ports:
+  - 25826/udp
+  - 25827/udp
+  - 3306/tcp
+
+# MySQL settings
+mysqlservice: mysqld
+mysql_port: 3306
+# Setup for remote connection
+mysql_bind_address: 0.0.0.0
+# Setup for user and database
+mysql_db_name: wordpress_db
+mysql_db_user: wordpress_usr
+mysql_db_password: 1OjejAfPod
+mysql_db_priv: wordpress_db.*:ALL
+mysql_webserver_name: 192.168.56.55
