@@ -12,7 +12,7 @@
  Vincent
 
 ######6.2.3.10 Troubleshooting Multiarea OSPFv2 and OSPFv3:   
- Josey
+ Vincent
 
 ######7.2.2.6: Configuring Basic EIGRP with IPv6   
  Josey
