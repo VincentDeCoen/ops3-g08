@@ -104,3 +104,35 @@ passive-interface lo5
 ```
 
 #####3.4) Verify OSPF settings
+```show ip protocols```
+```show ip ospf interface brief```
+
+#####3.5) MD5
+######3.5.1) R1
+```
+conf t
+int s0/0/0
+ip ospf message-digest-key 1 md5 cisco123
+ip OSPF authentication message-digest
+```
+
+######3.5.2) R2
+```
+conf t
+int s0/0/0
+ip ospf message-digest-key 1 md5 cisco123
+ip OSPF authentication message-digest
+
+int s0/0/1
+ip ospf message-digest-key 1 md5 cisco123
+ip OSPF authentication message-digest
+```
+
+######3.5.3) R3
+```
+conf t
+int s0/0/1
+ip ospf message-digest-key 1 md5 cisco123
+ip OSPF authentication message-digest
+```
+```show ip ospf neighbor```
