@@ -42,7 +42,7 @@
 * Windows Server: debugging + script aanvullen
 * Powershell: Herhaling
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Ruben.png "Tijdsregistratie Ruben")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/Week10Ruben.png "Tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
