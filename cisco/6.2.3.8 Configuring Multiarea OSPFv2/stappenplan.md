@@ -74,7 +74,7 @@ network 192.168.12.0 0.0.0.3 area 0
 passive-interface lo1
 passive-interface lo2
 exit
-ip route 0.0.0.0 0.0.0.0
+ip route 0.0.0.0 0.0.0.0 lo0
 router ospf 1
 default-information originate
 ```
