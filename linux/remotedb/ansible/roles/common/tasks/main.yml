@@ -18,3 +18,6 @@
   copy:
     src: RPM-GPG-KEY-EPEL-7
     dest: /etc/pki/rpm-gpg
+
+- name: Start JMeter PerfMon Server Agent
+  command: /vagrant/jmeter/ServerAgent-2.2.1/startAgent.sh

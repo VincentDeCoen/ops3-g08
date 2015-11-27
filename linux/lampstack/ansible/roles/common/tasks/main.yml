@@ -1,0 +1,4 @@
+---
+
+- name: Start JMeter PerfMon Server Agent
+  shell: nohup /vagrant/jmeter/ServerAgent-2.2.1/startAgent.sh &

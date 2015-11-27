@@ -1,3 +1,28 @@
+### Markdown cheat sheet
+
+* Headings:
+  - zet een spatie tussen de '#'-tekens en de tekst van de titel
+  - zet een regel witruimte na de titel
+
+
+* Lists: zet een spatie tussen het opsommingsteken (-,\*, of 1.) en de tekst
+
+* Code blocks:
+  - \`\`\` (triple backticks) voor en na het blok **op een aparte regel**. Dus niet \`\`\` Show-MyCode \`\`\`) maar   
+    \`\`\`  
+    Show-MyCode  
+    \`\`\`
+  - het inspringingsniveau waar het blok moet komen +4 tabs (= 8 spaties) inspringen, boven en onder het blok een witregel
+
+* Commands: insluiten in \`\` (dus 1 single backtick ervoor, 1 erna)  
+  bvb \`
+
+* Een zin in dezelfde paragraaf op de volgende regel zetten zonder een regel witruimte te moeten laten: 2 spaties achter de voorgaande zin, newline, de tweede zin. Voorbeeld: de zin hieronder.   
+Dit kan nuttig zijn in genummerde lijsten, omdat de regel witruimte ervoor zou zorgen dat de nummering onderbroken wordt en eronder opnieuw bij 1 begint.
+
+* Links naar een andere heading in hetzelfde document: \[linktekst\]\(#heading-als-tag\)  
+Van elke heading die je maakt wordt achter de schermen een tag gemaakt die je kan aanduiden met #de-titel-in-kleine-letters. Bijvoorbeeld: [Handige links voor Powershell](#powershell).
+
 ### Powershell
 
 Handige links die helpen bij powershell !

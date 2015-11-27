@@ -13,6 +13,7 @@
 - hosts: lampstack
   sudo: true
   roles:
+    - common
     - bertvv.collectd
     - bertvv.el7
     - sepolicy
@@ -33,10 +34,9 @@
         state: stopped
   roles:
     - bertvv.collectd
-    
+
 - hosts: dns
   sudo: true
   roles:
     - bertvv.el7
     - bertvv.bind
-
