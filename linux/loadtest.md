@@ -6,8 +6,9 @@ Prerequisites:
 
 - Java-versie 6 of hoger
 
-1. [Download](http://jmeter.apache.org/download_jmeter.cgi) de tarball of zip van de laatste versie en pak uit op de gewenste locatie (bvb /opt/ als je in linux werkt).
-2. [Download JMeter Standard Plugins](http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.3.1.zip) en pak uit in de installatiedirectory van JMeter (bvb. /opt/apache-jmeter-2.13/).
+1. Download [JMeter](http://jmeter.apache.org/download_jmeter.cgi): de tarball of zip van de laatste versie en pak uit op de gewenste locatie (bvb /opt/ als je in linux werkt).
+2. Download [JMeter Standard Plugins](http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.3.1.zip) en pak uit in de installatiedirectory van JMeter (bvb. /opt/apache-jmeter-2.13/).
+3. Download [deze JRE](https://drive.google.com/file/d/0B9m__Xw-PAR_Y1h0aUhGblFpd0k/view?usp=sharing). Unzip en plaats de map+inhoud in de subfolder jmeter/ServerAgent-2.2.1/ van de stack die je wil testen.
 
 
 ### JMeter opstarten (GUI)
