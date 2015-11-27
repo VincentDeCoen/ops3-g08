@@ -33,7 +33,7 @@
 * Powershell: herhaling
 * Linux Troubleshooting
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Vincent.PNG "Tijdsregistratie Vincent")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Vincent.png "Tijdsregistratie Vincent")
 
 ### Ruben Piro
 
@@ -42,7 +42,7 @@
 * Windows Server: debugging + script aanvullen
 * Powershell: Herhaling
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Ruben.PNG "Tijdsregistratie Ruben")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Ruben.png "Tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
