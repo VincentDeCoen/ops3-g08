@@ -1,4 +1,5 @@
 ####Verantwoordelijken uitvoering labo's cisco
+####Packet Tracer
 ######2.3.2.3 Configuring Rapid PVST+, PortFast and BPDU Guard:    
  Ruben 
 
@@ -15,4 +16,7 @@
  Vincent
 
 ######7.2.2.6: Configuring Basic EIGRP with IPv6   
- Josey
+
+####Fysieke opstelling
+######7.2.2.6: Configuring Basic EIGRP with IPv6   
+Vincent & Ruben
