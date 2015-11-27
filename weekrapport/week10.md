@@ -31,6 +31,7 @@
 * Cisco Labo: 7.2.2.5 + stappenplan
 * Cisco Labo: 6.2.3.10 + stappenplan
 * Powershell: herhaling
+* Linux Troubleshooting
 
 ![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week10Vincent.PNG "Tijdsregistratie Vincent")
 
