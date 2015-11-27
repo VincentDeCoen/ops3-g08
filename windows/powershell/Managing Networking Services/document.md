@@ -433,17 +433,18 @@ Once the PKI environment is implemented, the next step is to create a group poli
 clients autoenroll. Unfortunately, there is not a built-in function to edit the group policy objects
 we need, so we have to perform the task manually. Following are the steps necessary to set
 up the autoenroll GPO:
-1. Open Server Manager and select Tools | Group Policy Management
-2. Browse to Group Policy Management | Forest <forestname> | Domains |
+
+1.    Open Server Manager and select Tools | Group Policy Management
+2.    Browse to Group Policy Management | Forest <forestname> | Domains |
 <domainname>.
-3. Right-click on Default Domain Policy and select Edit:
-4. In the Group Policy Management Editor, browse to Default Domain Policy |
+3.    Right-click on Default Domain Policy and select Edit:
+4.    In the Group Policy Management Editor, browse to Default Domain Policy |
 Computer Configuration | Policies | Windows Settings | Security Settings | Public
-Key Policies:
-5. Right-click on Certificate Services Client – Auto-Enrollment and select Properties.
-6. In the Enrollment Policy Configuration window, set the following fields:
+Key Policies
+5.    Right-click on Certificate Services Client – Auto-Enrollment and select Properties.
+6.    In the Enrollment Policy Configuration window, set the following fields:
  Configuration Model: Enabled
  Check the Renew expired certificates, update pending certificates, and
 remove revoked certificates checkbox
  Check the Update certificates that use certificate templates checkbox
-7. Click on OK and close the Group Policy Management Editor.
+7.    Click on OK and close the Group Policy Management Editor.
