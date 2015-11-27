@@ -1,17 +1,18 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 10
 
 * Groep: g08
 * Datum: 27/11/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |     ja  |           |
+| Ruben Piro |    ja   |           |
+| Robbe Van Daele |    neen   |           |
+| Birgit Croux |   TILE    |           |
+| Josey De Smet |  neen     |            |
 
 ## Wat heb je deze week gerealiseerd?
+
 
 ### Algemeen
 
@@ -26,15 +27,21 @@
 
 ### Vincent De Coen
 
-* ...
+* Cisco Labo: 6.2.3.9 + stappenplan
+* Cisco Labo: 7.2.2.5 + stappenplan
+* Cisco Labo: 6.2.3.10 + stappenplan
+* Powershell: herhaling
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week10Vincent.PNG "Tijdsregistratie Vincent")
 
 ### Ruben Piro
 
-* ...
+* Cisco Labo: 2.3.2.3 + stappenplan
+* Cisco Labo: 6.2.3.8 + stappenplan
+* Windows Server: debugging + script aanvullen
+* Powershell: Herhaling
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w09/week10Ruben.PNG "Tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
