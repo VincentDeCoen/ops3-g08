@@ -7,7 +7,9 @@
 ###Configure static networking
 
 1. Find the **interface** to set by executing   
-   ```Get-NetIPInterface```
+   ```
+   Get-NetIPInterface
+   ```
 
 2. Set the **IP information** using New-NetIPAddress:  
     ```
@@ -20,10 +22,10 @@
     -ServerAddresses "10.10.10.10","10.10.10.11" 
     ```
 4. Set the **default route** using New-NetRoute:  
-  ```
-  New-NetRoute -DestinationPrefix "0.0.0.0/0" -NextHop "10.10.10.1"
-  -InterfaceAlias Ethernet
-  ```
+   ```
+    New-NetRoute -DestinationPrefix "0.0.0.0/0" -NextHop "10.10.10.1"
+    -InterfaceAlias Ethernet
+    ```
 
 How it works...
 In the **first step** we list out the network adapters available on the server. Windows Servers often
