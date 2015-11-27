@@ -59,7 +59,10 @@
 
 ### Josey De Smet
 
-* ...
+* Windows powershell DHCP Scopes/server failover/convert to static script
+* Windows powershell networking
+* Windows powershell zones
+* PKI/domaincontrollers
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -74,6 +77,8 @@
 ### Robbe Van Daele
 ### Birgit Croux
 ### Josey De Smet
+* Cisco labo's
+* MVA herhalen
 
 ## Waar hebben jullie nog problemen mee?
 
