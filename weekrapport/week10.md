@@ -33,7 +33,7 @@
 * Powershell: herhaling
 * Linux Troubleshooting
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/week10Vincent.png "Tijdsregistratie Vincent")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w10/Week10Vincent.PNG "Tijdsregistratie Vincent")
 
 ### Ruben Piro
 
