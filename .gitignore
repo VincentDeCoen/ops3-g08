@@ -27,5 +27,9 @@ linux/remotedb/ansible/roles/*.*
 # Ignore Python bytecodes
 *.pyc
 
-# Ignore JRE
+# Ignore ServerAgent
 **/JRE/
+**/ServerAgent-2.2.1/
+# Ignore Jmeter results, logs
+*.jtl
+**/jmeter.log
