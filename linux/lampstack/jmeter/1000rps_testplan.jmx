@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="10rps" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="1000rps" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -50,18 +50,18 @@
         <hashTree/>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="1817388868">
+            <collectionProp name="925778667">
               <stringProp name="49">1</stringProp>
-              <stringProp name="1567">10</stringProp>
+              <stringProp name="1507423">1000</stringProp>
               <stringProp name="49">1</stringProp>
             </collectionProp>
-            <collectionProp name="1542671659">
-              <stringProp name="1567">10</stringProp>
-              <stringProp name="1567">10</stringProp>
+            <collectionProp name="-1219050997">
+              <stringProp name="1507423">1000</stringProp>
+              <stringProp name="1507423">1000</stringProp>
               <stringProp name="48780">150</stringProp>
             </collectionProp>
-            <collectionProp name="-1974898578">
-              <stringProp name="1567">10</stringProp>
+            <collectionProp name="449956263">
+              <stringProp name="1507423">1000</stringProp>
               <stringProp name="49">1</stringProp>
               <stringProp name="1567">10</stringProp>
             </collectionProp>
@@ -99,7 +99,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">10rps_perfmon.jtl</stringProp>
+        <stringProp name="filename">1000rps_perfmon.jtl</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -160,11 +160,44 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">10rps_responsetime.jtl</stringProp>
+        <stringProp name="filename">1000rps_responsetime.jtl</stringProp>
         <stringProp name="RespTimeGraph.interval">1000</stringProp>
-        <stringProp name="RespTimeGraph.graphtitle">10 requests per second: Response Times </stringProp>
+        <stringProp name="RespTimeGraph.graphtitle">1000 requests per second: Response Times </stringProp>
         <boolProp name="RespTimeGraph.seriesselection">true</boolProp>
         <stringProp name="RespTimeGraph.seriesselectionmatchlabel">*HTTP*</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename">/home/deux/jmeter/1000rps_responsetime.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>

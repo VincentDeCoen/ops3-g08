@@ -42,3 +42,5 @@ Navigeer in de cli naar de directory 'jmeter' in de set-up die je wil testen (bv
 * `-t` gevolgd door het testplan dat je wil uitvoeren
 
 Na de test kan je de resultaten bekijken door de GUI te starten, het testplan in te laden, de listener te selecteren en het jtl-bestand te laten inladen (knop Browse...).
+
+LET OP: Als je dezelfde test 2x uitvoert, dan wordt het jtl-bestand niet overschreven, de nieuwe data wordt aan het einde toegevoegd. Als je dit niet wil, moet je een andere bestandsnaam opgeven in de listener of het originele jtl-bestand hernoemen.
