@@ -17,6 +17,8 @@ el7_firewall_allow_services:
 el7_firewall_allow_ports:
   - 80/tcp
   - 3306/tcp
+  - 4444/tcp
+  - 4444/udp
 
 
 # nginx

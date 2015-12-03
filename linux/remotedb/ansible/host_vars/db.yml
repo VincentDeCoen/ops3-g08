@@ -6,6 +6,8 @@ el7_firewall_allow_ports:
   - 25826/udp
   - 25827/udp
   - 3306/tcp
+  - 4444/tcp
+  - 4444/udp
 
 # MySQL settings
 mysqlservice: mysqld
