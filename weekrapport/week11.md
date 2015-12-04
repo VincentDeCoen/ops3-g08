@@ -26,9 +26,11 @@
 
 ### Vincent De Coen
 
-* ...
+* Fysieke opstelling cisco 
+* Powershell script testen
+* Powershell herhalen
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w11/Week11Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
