@@ -6,7 +6,7 @@
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
 | Vincent De Coen |    Ja   |           |
-| Ruben Piro |       | Ja          |
+| Ruben Piro |    ja   |          |
 | Robbe Van Daele |    neen   |           |
 | Birgit Croux |      Ja |           |
 | Josey De Smet |    Neen  |            |
