@@ -16,6 +16,7 @@
 |Get-Random|Shows a random number|
 |Get-Random 21|Shows a random number(max 21)|
 |Update-Help -Force|Force an update of the help system|
+|Set-WinUserLanguageList -LanguageList nl-BE|Set nl-BE (azerty) keyboard|
 
 ## Chapter 2: Using Windows Powershell cmdlets
 ----------------------------------------------
