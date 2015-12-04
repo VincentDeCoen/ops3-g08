@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |    Ja   |           |
+| Ruben Piro |       | Ja          |
+| Robbe Van Daele |    neen   |           |
+| Birgit Croux |      Ja |           |
+| Josey De Smet |    Neen  |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,7 +17,7 @@
 
 ![Afbeelding huidige toestand Kanban-bord(en) invoegen](/weekrapport/media/w11/kanbanteam.png "huboard team")
 
-* Fysieke opstelling Cisco
+* Fysieke opstelling Cisco + laatste labo Packet Tracer
 * JMeter testen linuxopstellingen
 * web cluster, load balancer
 
@@ -32,9 +32,11 @@
 
 ### Ruben Piro
 
-* ...
+* Cisco labo: Configuring Basic EIGRP IPv6
+* Fysiek labo 
+* Powershell kleine herhaling
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w11/Week11Ruben.PNG "tijdregistratie individueel Ruben")
 
 ### Robbe Van Daele
 
