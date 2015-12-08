@@ -2,7 +2,7 @@
 
 ###Required:
 - 3 Routers
-- Serial cables
+- 1 Serial cable
 - Tera Term must be installed
 
 
