@@ -1,5 +1,12 @@
-####Verantwoordelijken uitvoering labo's cisco
-####Packet Tracer
+##README CISCO
+###1. Mappenstructuur
+######1.1 Fysiek
+De folder 'fysiek' bevat het verslag en stappenplan van de fysieke opstelling, m.b.t. het labo 6.2.3.8
+
+######1.2 Simulaties
+De folder 'simulaties' bevat de Packet Tracers bestanden met bijgevoegde stappenplannen van ALLE labo opdrachten.
+###2. Verantwoordelijken uitvoering labo's cisco
+####2.1 Packet Tracer
 ######2.3.2.3 Configuring Rapid PVST+, PortFast and BPDU Guard:    
  Ruben 
 
@@ -18,6 +25,6 @@
 ######7.4.3.4: Configuring Basic EIGRP with IPv6 Routing
 Ruben
 
-####Fysieke opstelling
+####2.2 Fysieke opstelling
 ######6.2.3.8: Configuring Multiarea OSPFv2 
 Vincent & Ruben
