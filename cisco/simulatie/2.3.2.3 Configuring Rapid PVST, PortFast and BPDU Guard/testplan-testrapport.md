@@ -2,6 +2,8 @@
 
 ### Testrapport
 
+Auteur: Birgit
+
 Testen uitgevoerd in PacketTracer 6.2 voor Linux  
 (Stappenplan gevolgd)
 
