@@ -10,7 +10,17 @@
 #        name: firewalld
 #        state: stopped
 
-- hosts: web0
+- hosts: web1
+  sudo: true
+  roles:
+    - bertvv.collectd
+    - bertvv.el7
+    - common
+    - nginx
+    - php-fpm
+    - wordpress
+
+- hosts: web2
   sudo: true
   roles:
     - bertvv.collectd
@@ -21,7 +31,7 @@
     - wordpress
 
 
-- hosts: db
+- hosts: db2
   sudo: true
   roles:
     - bertvv.el7
@@ -34,3 +44,8 @@
         name: wordpress_db
         state: import
         target: /vagrant/ansible/roles/common/files/wpdump.sql
+
+- hosts: lb
+  sudo: true
+  roles:
+    - haproxy

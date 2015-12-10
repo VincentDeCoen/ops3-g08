@@ -1,4 +1,4 @@
-# host_vars/web0.yml
+# host_vars/web1.yml
 ---
 
 el7_repositories:
@@ -32,7 +32,7 @@ el7_firewall_allow_ports:
 # This is used for the nginx server configuration, but access to the
 # WordPress site is not restricted by a named host.
 nginx_port: 80
-server_hostname: 192.168.56.55
+server_hostname: 192.168.56.62
 
 
 # wordpress
@@ -41,7 +41,7 @@ wp_sha256sum: 3b0db3abe8504f15a33cf64188a493ec0de01eaa8d20e37c3d6a1d9fa0a40fb4
 wp_db_name: wordpress_db
 wp_db_user: wordpress_usr
 wp_db_password: 1OjejAfPod
-wp_db_host: 192.168.56.59
+wp_db_host: 192.168.56.60
 # Disable All Updates
 # By default automatic updates are enabled, set this value to true to disable all automatic updates
 auto_up_disable: true

@@ -22,6 +22,18 @@ bind_zone_hosts:
     ip: 192.168.56.55
   - name: 'db'
     ip: 192.168.56.59
+
+  - name: 'db2'
+    ip: 192.168.56.60
+  - name: 'web1'
+    ip: 192.168.56.61
+  - name: 'web2'
+    ip: 192.168.56.62
+  - name: lb
+    ip: 192.168.56.20
+    aliases:
+      - blog
+
 bind_allow_query:
   - 'any'
 bind_listen_ipv4:

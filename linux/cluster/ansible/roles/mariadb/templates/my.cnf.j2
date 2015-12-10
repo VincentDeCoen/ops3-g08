@@ -1,0 +1,13 @@
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+port={{ mysql_port }}
+# Set up server for remote connection
+bind-address={{ mysql_bind_address }}
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mariadb/mysqld.pid
