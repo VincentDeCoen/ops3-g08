@@ -6,7 +6,7 @@ $newname = "AsSv1"
 
 #restart the computer
 	Restart-Computer
-	
+
 #Set a static ip
 function SetIP{
     Add-windowsfeature RSAT-AD-Tools
@@ -32,14 +32,17 @@ function InstallDHCP{
     Install-WindowsFeature -Name RSAT-DHCP
     Set-DhcpServerv4Binding -BindingState $true -InterfaceAlias "Ethernet"
     Add-DhcpServerInDC -DnsName "AsSv1.Assengraaf.nl"
-    #Add-DhcpServerv4Scope -Name "Assengraafscope" -StartRange 192.168.210.30 -EndRange 192.168.210.230 -SubnetMask 255.255.255.0
+		Add-DhcpServerv4Scope -Name "Assengraafscope" -StartRange 192.168.210.31 -EndRange 192.168.210.130 -SubnetMask 255.255.255.0
+    Set-DhcpServerv4DnsSetting -ScopeId 192.168.210.0 -DynamicUpdates OnClientRequest -DeleteDnsRROnLeaseExpiry $true
+    Set-DhcpServerv4OptionValue -ScopeId 192.168.210.0 -DnsServer 192.168.210.11 -DnsDomain Assengraaf.nl -Router 192.168.210.11
 }
 
 
 #OU
 function CreateOU{
     New-ADOrganizationalUnit -Name AsAfdelingen -Path 'DC=Assengraaf,DC=NL' -Description "Overkoepeldende OU voor het domein Assengraaf.nl" -ProtectedFromAccidentalDeletion $False
-    New-ADOrganizationalUnit -Name Beheer -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de Beheerders" -ProtectedFromAccidentalDeletion $False #nog block inheritance
+    New-ADOrganizationalUnit -Name Beheer -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de Beheerders" -ProtectedFromAccidentalDeletion $False
+		Set-GPInheritance -Target 'OU=Beheer,OU=AsAfdelingen,DC=Assengraaf,DC=nl' -IsBlocked Yes
     New-ADOrganizationalUnit -Name Directie -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de Directie" -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Verzekeringen -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de verzekeringen" -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Financieringen -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de Financieringen" -ProtectedFromAccidentalDeletion $False
@@ -48,7 +51,7 @@ function CreateOU{
 
 #CSV Import
 function Add-Users {
-    $Users = Import-CSV -Delimiter "," -Path "AsCSV.csv" 
+    $Users = Import-CSV -Delimiter "," -Path "AsCSV.csv"
 	ForEach($User in $Users) {
 	    $DisplayName = $User.GivenName + " " + $User.Surname
 	    $UserFirstname = $User.GivenName
@@ -59,12 +62,28 @@ function Add-Users {
 	    $SAM = $FirstLetterFirstname + $UserSurname
 	    $Password = ConvertTo-SecureString -AsPlainText $Pass -force
         $OuPath = 'OU=' + $User.Department + ',DC=Assengraaf,DC=NL'
-    
-        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName 
+
+        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName
         -GivenName $GivenName -SurName $SurName -Path $OuPath -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true
     }
 }
 
 function Add-FolderPerUser{
-	
+
+}
+
+function Add-Printers {
+    Add-WindowsFeature Print-Server -IncludeManagementTools
+    Add-PrinterPort -Name AsPr1Port -PrinterHostAddress "192.168.210.131"
+    Add-PrinterDriver -Name "HP LaserJet 5200 PS Class Driver"
+    Add-Printer -Name AsPr1 -DriverName "HP LaserJet 5200 PS Class Driver" -PortName AsPr1Port
+    Set-Printer -Name AsPr1 -Shared $true -Published $true
+    Add-PrinterPort -Name AsPr2Port -PrinterHostAddress "192.168.210.132"
+    Add-PrinterDriver -Name "HP LaserJet 5200 PS Class Driver"
+    Add-Printer -Name AsPr2 -DriverName "HP LaserJet 5200 PS Class Driver" -PortName AsPr2Port
+    Set-Printer -Name AsPr2 -Shared $true -Published $true
+    New-ADGroup -Name "T_AsPr1" -SamAccountName T_AsPr1 -GroupCategory Security -GroupScope DomainLocal `
+    -Path "OU=AsAfdelingen,DC=Assengraaf,DC=nl" -Description "Toegangsgroep voor AsPr1"
+    New-ADGroup -Name "T_AsPr2" -SamAccountName T_AsPr2 -GroupCategory Security -GroupScope DomainLocal `
+    -Path "OU=AsAfdelingen,DC=Assengraaf,DC=nl" -Description "Toegangsgroep voor AsPr2"
 }
