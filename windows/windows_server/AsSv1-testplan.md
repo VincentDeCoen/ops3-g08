@@ -11,8 +11,10 @@
   - Om te testen, plaats je alle scripts uit de folder en CSV-bestand ```AsCSV.csv``` op het bureaublad.
   - Start Powershell, doe ```cd Desktop```.
   - 1. De basissettings: Doe
-   ```. ./basis_conf.ps1``` en ```basiscommandos``` (om de overkoepelende functie uit te voeren die de basissettings maakt)
-  - 2. AD
+   ```. ./1basis_conf.ps1``` en ```basiscommandos``` (om de overkoepelende functie uit te voeren die de basissettings maakt)
+  - 2. AD: Doe ```2ad_ou_conf.ps1```
+  - 3. DHCP: doe ´´´3dhcp_conf.ps1´´´
+  - 4. Printers: doe ```4printers_conf.ps1```
 
 #####Checklist Windows Server 2012 Met GUI
 - [ ] Virtuele machine Windows Server 2012 Met GUI 
