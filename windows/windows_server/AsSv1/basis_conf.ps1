@@ -1,4 +1,12 @@
-#Windows Server 2012: Basis Configuratie
+<#Windows Server 2012: Basis Configuratie
+ Basic configuration of the Server
+ - Rename
+ - IP settings
+ - Activate
+ - Firewall
+ - Update
+ - Restart
+#>
 
 #Rename The Machine
 $newname = "AsSv1"
@@ -30,10 +38,6 @@ Activate the server
  }
 #>
 
-#Restart The Server (To complete the rename)
-function rename{
-	Restart-Computer
-}
 
 #Firewall
 function setFirewall{
@@ -45,4 +49,9 @@ Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow 
 #Windows Update
 function{
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\AUoptions" 
+}
+
+#Restart The Server (To complete the rename)
+function rename{
+	Restart-Computer
 }
