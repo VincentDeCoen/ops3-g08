@@ -9,6 +9,9 @@
 
 function basiscommandos
 {
+    Write-Host "Execute Server Rename function, SetIP function, SetFirewall function and Restart function"
+    Start-Sleep -s 2
+    
     Rename
     SetIP
     setFirewall
@@ -19,6 +22,10 @@ function basiscommandos
 function Rename{
 $newname = "AsSv1"
 	Rename-Computer -NewName $newname -force
+
+Write-Host "Server is getting a new name AsSv1"
+    Start-Sleep -s 2
+
 }
 #IP Settings: Static IP
 function SetIP{
@@ -31,7 +38,8 @@ function SetIP{
     
     New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -PrefixLength $ippref -DefaultGateway $ipgw -AddressFamily IPv4
 
-	
+	Write-Host "Server is getting IP Settings"
+    Start-Sleep -s 2
 }
 
 <#
@@ -48,9 +56,13 @@ function setFirewall{
 
 Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow –NotifyOnListen True -AllowUnicastResponseToMulticast True –LogFileName %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log
 
+Write-Host "Server is getting Firewall Settings"
+    Start-Sleep -s 2
 }
 
 #Restart The Server (To complete the rename)
 function Restart{
+Write-Host "Server is getting a Reboot"
+    Start-Sleep -s 2
 	Restart-Computer
 }
