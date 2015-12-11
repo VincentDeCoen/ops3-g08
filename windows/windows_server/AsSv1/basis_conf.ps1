@@ -13,14 +13,22 @@ function SetIP{
     $ippref = "24"
     $IntAlias = "Ethernet"
     
-    New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -Interfacealias $IntAlias -PrefixLength $ippref -DefaultGateway $ipgw
+    New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -Interfacealias $IntAlias -PrefixLength $ippref -DefaultGateway $ipgw -AddressFamily IPv4
+
+#Rename Adapter
+    if(Get-NetAdapter -name like Ethernet) {
+        get-netadapter -Name Ethernet|Rename-NetAdapter -NewName ConnectieAssengraaf
+    }
+	
 }
 
-#Activate the server
-#function{
-#	slmgr.vbs -ipk<productkey>
-#	slmgr.vbs -ato
-#}
+<#
+Activate the server
+ function{
+	slmgr.vbs -ipk<productkey>
+	slmgr.vbs -ato
+ }
+#>
 
 #Restart The Server (To complete the rename)
 function rename{
@@ -34,3 +42,7 @@ Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow 
 
 }
 
+#Windows Update
+function{
+	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\AUoptions" 
+}
