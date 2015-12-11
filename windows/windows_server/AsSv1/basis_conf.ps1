@@ -20,15 +20,16 @@ function basiscommandos
 
 #Rename The Machine
 function Rename{
-$newname = "AsSv1"
-	Rename-Computer -NewName $newname -force
-
 Write-Host "Server is getting a new name AsSv1"
     Start-Sleep -s 2
+$newname = "AsSv1"
+	Rename-Computer -NewName $newname -force
 
 }
 #IP Settings: Static IP
 function SetIP{
+    Write-Host "Server is getting IP Settings"
+    Start-Sleep -s 2
     Add-windowsfeature RSAT-AD-Tools
     $ipaddress = "192.168.210.10"
     $ipgw = "192.168.0.1"
@@ -38,8 +39,7 @@ function SetIP{
     
     New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -PrefixLength $ippref -DefaultGateway $ipgw -AddressFamily IPv4
 
-	Write-Host "Server is getting IP Settings"
-    Start-Sleep -s 2
+
 }
 
 <#
@@ -53,11 +53,12 @@ Activate the server
 
 #Firewall
 function setFirewall{
+    Write-Host "Server is getting Firewall Settings"
+    Start-Sleep -s 2
 
 Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow –NotifyOnListen True -AllowUnicastResponseToMulticast True –LogFileName %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log
 
-Write-Host "Server is getting Firewall Settings"
-    Start-Sleep -s 2
+
 }
 
 #Restart The Server (To complete the rename)
