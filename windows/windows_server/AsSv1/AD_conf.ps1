@@ -1,5 +1,9 @@
 #Installation of AD and OU's and Users with CSV-file
 function InstallAD{
+	
+	Write-Host "Server is getting AD"
+   Start-Sleep -s 2
+	
     Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools
     Import-Module ADDSDeployment
     Install-addsforest -creatednsdelegation:$false -domainMode "win2012" -DomainName "Assengraaf.nl" -SafeModeAdministratorPassword (ConvertTo-SecureString  Admin123 -AsPlainText -Force ) -forestmode "win2012" `
@@ -8,6 +12,10 @@ function InstallAD{
 
 #OU
 function CreateOU{
+	
+	Write-Host "Server is getting the ASSENGRAAF OU's "
+   Start-Sleep -s 2
+	
     New-ADOrganizationalUnit -Name AsAfdelingen -Path 'DC=Assengraaf,DC=NL' -Description "Overkoepeldende OU voor het domein Assengraaf.nl" -ProtectedFromAccidentalDeletion $False
     New-ADOrganizationalUnit -Name Beheer -Path 'OU=AsAfdelingen,DC=Assengraaf,DC=NL' -Description "Groep voor de Beheerders" -ProtectedFromAccidentalDeletion $False
 		Set-GPInheritance -Target 'OU=Beheer,OU=AsAfdelingen,DC=Assengraaf,DC=nl' -IsBlocked Yes
@@ -19,6 +27,10 @@ function CreateOU{
 
 #CSV Import
 function Add-Users {
+	
+	Write-Host "Server is importing the CSV file"
+   Start-Sleep -s 1
+	
     $Users = Import-CSV -Delimiter "," -Path "AsCSV.csv"
 	ForEach($User in $Users) {
 	    $DisplayName = $User.GivenName + " " + $User.Surname
@@ -43,5 +55,8 @@ function Add-Users {
         New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName
         -GivenName $GivenName -SurName $SurName -Path $U -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true -HomeDirectory "\\users\$FullName\HomeDir"
 
+	Write-Host "User $DisplayName is created"
+   Start-Sleep -s 1
+	
 	}
 }
