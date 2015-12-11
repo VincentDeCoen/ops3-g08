@@ -36,7 +36,7 @@
 * Windows server script errors proberen oplossen
 * Linux server testing + problemen guest additions
 
-[Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/Week12Ruben.PNG "tijdsregistratie Ruben")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/Week12Ruben.PNG "tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
