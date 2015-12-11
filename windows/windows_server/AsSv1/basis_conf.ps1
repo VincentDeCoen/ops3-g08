@@ -8,7 +8,7 @@ $newname = "AsSv1"
 function SetIP{
     Add-windowsfeature RSAT-AD-Tools
     $ipaddress = "192.168.210.11"
-    $ipgw = "192.168.210.1"
+    $ipgw = "192.168.0.1"
     $ipdns = "192.168.210.11"
     $ippref = "24"
     $IntAlias = "Ethernet"
