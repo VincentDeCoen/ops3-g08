@@ -28,7 +28,7 @@
 * Voorbereiden groepseindopdracht
 * Linux testing & Troubleshooting
 
-![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/week12Vincent "tijdregistratie individueel Vincent")
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/week12Vincent.PNG "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
