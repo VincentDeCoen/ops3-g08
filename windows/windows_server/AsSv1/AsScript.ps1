@@ -73,7 +73,7 @@ function Add-Users {
     }	
     
         New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName
-        -GivenName $GivenName -SurName $SurName -Path $OuPath -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true -HomeDirectory "\\users\$FullName\HomeDir" -Path $U
+        -GivenName $GivenName -SurName $SurName -Path $U -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true -HomeDirectory "\\users\$FullName\HomeDir" -Path $U
     
 
 	}
