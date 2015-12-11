@@ -32,9 +32,11 @@
 
 ### Ruben Piro
 
-* ...
+* Groepsopdracht week 13 voorbereiden + taak opgenomen
+* Windows server script errors proberen oplossen
+* Linux server testing + problemen guest additions
 
-[Afbeelding individueel rapport tijdregistratie]
+[Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/Week12Ruben.PNG "tijdsregistratie Ruben")
 
 ### Robbe Van Daele
 
