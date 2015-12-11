@@ -43,7 +43,8 @@
 
 ### Birgit Croux
 
-* testplannen Cisco labo's
+* testrapport Cisco-labo 2.3.2.3
+* testplannen Cisco-labo's
 * web cluster + HAProxy
 * toevoegingen aan het script voor Windows Server: DHCP-instellingen aangevuld, block inheritance, netwerkprinters toevoegen
 
