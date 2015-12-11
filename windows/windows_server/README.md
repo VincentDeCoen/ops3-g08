@@ -1,7 +1,13 @@
 ###AsSv1
 
 
-#####Script: AsScript.ps1
+#####Scripts
+In deze map bevinden zich de scripts voor de Windows Server 2012.
+
+######1. Basis_conf.ps1
+In dit script bevinden zich de basisfuncties als:  
+```Rename, SetIP, setFirewall, Restart```.  
+Om alle functies tegelijk uit te voeren, gebruik je de overkoepelende functie ```basiscommandos```.
 
 #####CSV-bestand: AsCSV.csv
 

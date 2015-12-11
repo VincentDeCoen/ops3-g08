@@ -8,14 +8,17 @@
 
 #### 1)Testen Met Windows Server 2012 Met GUI (zonder vagrant)
   - Start de virtuele machine Windows Server 2012 Gui op (GUI bevat de Guest Additions)
-  - Om te testen, plaats je het script ```AsScript.ps1``` en CSV-bestand ```AsCSV.csv``` op het bureaublad.
-  - Start Powershell, doe ```cd Desktop``` en voer het commando ```./Desktop/AsScript.ps1``` uit.
-  - Nu moet de virtuele machine heropstarten en is het script uitgevoerd.
+  - Om te testen, plaats je alle scripts uit de folder en CSV-bestand ```AsCSV.csv``` op het bureaublad.
+  - Start Powershell, doe ```cd Desktop```.
+  - 1. De basissettings: Doe
+   ```. ./basis_conf.ps1``` en ```basiscommandos``` (om de overkoepelende functie uit te voeren die de basissettings maakt)
+  - 2. AD
 
 #####Checklist Windows Server 2012 Met GUI
 - [ ] Virtuele machine Windows Server 2012 Met GUI 
-- [ ] Het script en csv-bestand staan op het bureaublad
+- [ ] De scripts en csv-bestand staan op het bureaublad
 - [ ] Na het uitvoeren van het script, zijn volgende zaken geïnstalleerd:  
+  - [ ] Rename
   - [ ] Ip settings
   - [ ] AD
   - [ ] DNS
@@ -23,7 +26,6 @@
   - [ ] OU's (beheer, verzekeringen,...)
   - [ ] De CSV-gebruikers zijn aangemaakt
   
-#### 2)Testen Met Windows Server 2012 Server Core (Zonder GUI)
 
 ### Testrapport
 
