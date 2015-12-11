@@ -4,29 +4,33 @@
  - IP settings
  - Activate
  - Firewall
- - Update
  - Restart
 #>
 
+function basiscommandos
+{
+    Rename
+    SetIP
+    setFirewall
+    Restart
+}
+
 #Rename The Machine
+function Rename{
 $newname = "AsSv1"
 	Rename-Computer -NewName $newname -force
-
+}
 #IP Settings: Static IP
 function SetIP{
     Add-windowsfeature RSAT-AD-Tools
-    $ipaddress = "192.168.210.11"
+    $ipaddress = "192.168.210.10"
     $ipgw = "192.168.0.1"
     $ipdns = "192.168.210.11"
-    $ippref = "24"
-    $IntAlias = "Ethernet"
+    $ippref = "16"
+ 
     
-    New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -Interfacealias $IntAlias -PrefixLength $ippref -DefaultGateway $ipgw -AddressFamily IPv4
+    New-NetIPAddress -InterfaceIndex 12  -IPAddress $ipaddress -PrefixLength $ippref -DefaultGateway $ipgw -AddressFamily IPv4
 
-#Rename Adapter
-    if(Get-NetAdapter -name like Ethernet) {
-        get-netadapter -Name Ethernet|Rename-NetAdapter -NewName ConnectieAssengraaf
-    }
 	
 }
 
@@ -46,12 +50,7 @@ Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow 
 
 }
 
-#Windows Update
-function{
-	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\AUoptions" 
-}
-
 #Restart The Server (To complete the rename)
-function rename{
+function Restart{
 	Restart-Computer
 }
