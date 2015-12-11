@@ -61,11 +61,22 @@ function Add-Users {
 	    $GivenName = $User.GivenName
 	    $SAM = $FirstLetterFirstname + $UserSurname
 	    $Password = ConvertTo-SecureString -AsPlainText $Pass -force
+	    $Department = $User.Department
         $OuPath = 'OU=' + $User.Department + ',DC=Assengraaf,DC=NL'
 
+    switch ($Department)
+    {
+      "Directie" {$U = "OU = Directie, OU=AsAfdelingen, DC=Assengraaf, DC=nl"} 
+      "Staf" {$U = "OU = Staf, OU=AsAfdelingen, DC=Assengraaf, DC=nl"} 
+      "Verzekeringen" {$U = "OU = Verzekeringen, OU=AsAfdelingen, DC=Assengraaf, DC=nl"} 
+      "Financieringen" {$U = "OU = Financieringen, OU=AsAfdelingen, DC=Assengraaf, DC=nl"} 
+    }	
+    
         New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName
-        -GivenName $GivenName -SurName $SurName -Path $OuPath -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true
-    }
+        -GivenName $GivenName -SurName $SurName -Path $OuPath -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true -HomeDirectory "\\users\$FullName\HomeDir" -Path $U
+    
+
+	}
 }
 
 function Add-FolderPerUser{
