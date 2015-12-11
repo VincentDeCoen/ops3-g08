@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="5000rps" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="7500rps" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -13,8 +13,8 @@
     <hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="998616438">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="-1924935731">
+            <stringProp name="50702">350</stringProp>
             <stringProp name="0">0</stringProp>
             <stringProp name="49">1</stringProp>
             <stringProp name="48780">150</stringProp>
@@ -32,7 +32,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">192.168.56.55</stringProp>
+          <stringProp name="HTTPSampler.domain">192.168.56.20</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -50,18 +50,18 @@
         <hashTree/>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="1493077674">
+            <collectionProp name="119437596">
               <stringProp name="49">1</stringProp>
-              <stringProp name="1626587">5000</stringProp>
+              <stringProp name="1690974">7500</stringProp>
               <stringProp name="49">1</stringProp>
             </collectionProp>
-            <collectionProp name="-245351957">
-              <stringProp name="1626587">5000</stringProp>
-              <stringProp name="1626587">5000</stringProp>
+            <collectionProp name="-1252161493">
+              <stringProp name="1690974">7500</stringProp>
+              <stringProp name="1690974">7500</stringProp>
               <stringProp name="48780">150</stringProp>
             </collectionProp>
-            <collectionProp name="856356296">
-              <stringProp name="1626587">5000</stringProp>
+            <collectionProp name="1223186838">
+              <stringProp name="1690974">7500</stringProp>
               <stringProp name="49">1</stringProp>
               <stringProp name="1567">10</stringProp>
             </collectionProp>
@@ -99,7 +99,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">5000rps_perfmonmem_remotedb.jtl</stringProp>
+        <stringProp name="filename">7500rps_perfmonmem_cluster.jtl</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -109,14 +109,14 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="-436909170">
-            <stringProp name="-2047343570">192.168.56.55</stringProp>
+          <collectionProp name="-535308843">
+            <stringProp name="-2047343543">192.168.56.61</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="-1993889503">Memory</stringProp>
             <stringProp name="0"></stringProp>
           </collectionProp>
-          <collectionProp name="-464346681">
-            <stringProp name="-2047343566">192.168.56.59</stringProp>
+          <collectionProp name="-536381319">
+            <stringProp name="-2047343542">192.168.56.62</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="-1993889503">Memory</stringProp>
             <stringProp name="0"></stringProp>
@@ -154,9 +154,9 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">5000rps_responsetime_remotedb.jtl</stringProp>
+        <stringProp name="filename">7500rps_responsetime_cluster.jtl</stringProp>
         <stringProp name="RespTimeGraph.interval">1000</stringProp>
-        <stringProp name="RespTimeGraph.graphtitle">5000 requests per second: Response Times </stringProp>
+        <stringProp name="RespTimeGraph.graphtitle">7500 requests per second: Response Times </stringProp>
         <boolProp name="RespTimeGraph.seriesselection">true</boolProp>
         <stringProp name="RespTimeGraph.seriesselectionmatchlabel">*HTTP*</stringProp>
       </ResultCollector>
@@ -191,7 +191,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/home/deux/Documents/project_3/ops3-g08/5000rps_responsetime_cluster.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="false">
@@ -227,7 +227,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector CPU" enabled="false">
+      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector CPU webservers" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -257,7 +257,7 @@
             <threadCounts>true</threadCounts>
           </value>
         </objProp>
-        <stringProp name="filename">5000rps_perfmonCPU_remotedb.jtl</stringProp>
+        <stringProp name="filename">7500rps_perfmonCPU_cluster.jtl</stringProp>
         <longProp name="interval_grouping">1000</longProp>
         <boolProp name="graph_aggregated">false</boolProp>
         <stringProp name="include_sample_labels"></stringProp>
@@ -267,14 +267,14 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="1863805151">
-            <stringProp name="-2047343570">192.168.56.55</stringProp>
+          <collectionProp name="1765405478">
+            <stringProp name="-2047343543">192.168.56.61</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
             <stringProp name="0"></stringProp>
           </collectionProp>
-          <collectionProp name="1836367640">
-            <stringProp name="-2047343566">192.168.56.59</stringProp>
+          <collectionProp name="1764333002">
+            <stringProp name="-2047343542">192.168.56.62</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
             <stringProp name="0"></stringProp>
@@ -282,7 +282,7 @@
         </collectionProp>
       </kg.apc.jmeter.perfmon.PerfMonCollector>
       <hashTree/>
-      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector web0" enabled="false">
+      <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector webservers" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -322,14 +322,26 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
         <collectionProp name="metricConnections">
-          <collectionProp name="1863805151">
-            <stringProp name="-2047343570">192.168.56.55</stringProp>
+          <collectionProp name="1765405478">
+            <stringProp name="-2047343543">192.168.56.61</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="66952">CPU</stringProp>
             <stringProp name="0"></stringProp>
           </collectionProp>
-          <collectionProp name="-464346681">
-            <stringProp name="-2047343566">192.168.56.59</stringProp>
+          <collectionProp name="-535308843">
+            <stringProp name="-2047343543">192.168.56.61</stringProp>
+            <stringProp name="1600768">4444</stringProp>
+            <stringProp name="-1993889503">Memory</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="1764333002">
+            <stringProp name="-2047343542">192.168.56.62</stringProp>
+            <stringProp name="1600768">4444</stringProp>
+            <stringProp name="66952">CPU</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="-536381319">
+            <stringProp name="-2047343542">192.168.56.62</stringProp>
             <stringProp name="1600768">4444</stringProp>
             <stringProp name="-1993889503">Memory</stringProp>
             <stringProp name="0"></stringProp>
