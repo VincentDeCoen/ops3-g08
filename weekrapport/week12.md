@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Vincent De Coen |       |           |
-| Ruben Piro |       |           |
-| Robbe Van Daele |       |           |
-| Birgit Croux |       |           |
-| Josey De Smet |      |            |
+| Vincent De Coen |   Ja    |           |
+| Ruben Piro |    Ja   |           |
+| Robbe Van Daele |   Nee    |           |
+| Birgit Croux |  Ja     |           |
+| Josey De Smet |   Nee   |            |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -25,9 +25,10 @@
 
 ### Vincent De Coen
 
-* ...
+* Voorbereiden groepseindopdracht
+* Linux testing & Troubleshooting
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](/weekrapport/media/w12/week12Vincent "tijdregistratie individueel Vincent")
 
 ### Ruben Piro
 
