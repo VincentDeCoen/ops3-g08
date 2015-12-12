@@ -33,4 +33,14 @@
 
 ######Uitvoerder(s) test: Vincent De Coen
 
-- ...
+- Het volgen van de stappen verloopt vlekkenloos, de scripts doen wat er gezegd wordt.
+
+######Instellingen controlleren
+
+IP-instellingen controleren in Powershell:
+
+```
+Get-NetIPConfiguration -Detailed
+```
+
+Dit commando zal de instellingen van alle netwerkinterfaces tonen zoals Interfacenaam, ipv4- en ipv6-adres, de default-gateway, IP adres van de dns server tonen.
