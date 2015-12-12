@@ -44,3 +44,15 @@ Get-NetIPConfiguration -Detailed
 ```
 
 Dit commando zal de instellingen van alle netwerkinterfaces tonen zoals Interfacenaam, ipv4- en ipv6-adres, de default-gateway, IP adres van de dns server tonen.
+
+Active directory users bekijken
+
+```
+Get-AdUser -filter *
+```
+
+Configuratie van DNS server bekijken
+
+```
+Get-Dnsserver
+```
