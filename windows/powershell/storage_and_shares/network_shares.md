@@ -27,8 +27,9 @@ New-SmbShare -Name Share2 -Path E:\share2 -ReadAccess Everyone -FullAccess Admin
 
 cmdlets: Grant-SmbShareAccess, Block-SmbShareAccess, Unblock-SmbShareAccess
 
-
+```
 Grant-SmbShareAccess -Name Share1 -AccountName CORP\Joe.Smith -AccessRight Full -Confirm:$false
+```
 
 - Mandatory: share -Name (may be positional) or -InputObject <CimInstance[]>
 - AccessRight: Full, Modify, Read
