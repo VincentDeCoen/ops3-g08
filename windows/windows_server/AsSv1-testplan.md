@@ -12,9 +12,12 @@
   - Start Powershell, doe ```cd Desktop```.
   - 1. De basissettings: Doe
    ```. ./1basis_conf.ps1``` en ```basiscommandos``` (om de overkoepelende functie uit te voeren die de basissettings maakt)
-  - 2. AD: Doe ```2ad_ou_conf.ps1```
-  - 3. DHCP: doe ´´´3dhcp_conf.ps1´´´
-  - 4. Printers: doe ```4printers_conf.ps1```
+  - 2. AD: Doe ```. .\2ad_ou_conf.ps1```
+  - 2.1 `AD` -> installeert alles van de AD
+  - 2.2 `OU` -> installeert alles van de OU's en Users
+  - 3. DHCP: doe ```. .\3dhcp_conf.ps1```
+  - 3.1 `DHCP` -> installeert de DHCP (en scopes etc)
+  - 4. Printers: doe ```. .\4printers_conf.ps1```
 
 #####Checklist Windows Server 2012 Met GUI
 - [ ] Virtuele machine Windows Server 2012 Met GUI 
