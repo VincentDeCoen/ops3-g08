@@ -1,12 +1,9 @@
 #Installation of AD and OU's and Users with CSV-file
-function AD{
-    InstallAD
-    CreateOU
-    Add-Users
+function OU{
+	CreateOU
+	Add-Users
 }
-
-
-function InstallAD{
+function AD{
 	
     Write-Host "Server is getting AD"
     Start-Sleep -s 2
@@ -78,7 +75,6 @@ function Add-Users {
         -AccountPassword (ConvertTo-SecureString $Password -AsPlainText -Force) `
         -SurName $SurName `
         -Path $U `
-        -AccountPassword $Password `
         -ChangePasswordAtLogon $true `
         -enable $true `
         -HomeDirectory "\\users\$FullName\HomeDir"
