@@ -1,12 +1,18 @@
 #Installation of AD and OU's and Users with CSV-file
+function AD{
+    InstallAD
+    CreateOU
+    Add-Users
+}
+
+
 function InstallAD{
 	
     Write-Host "Server is getting AD"
     Start-Sleep -s 2
 	
-    Import-Module ADDSDeployment
     Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools
-    
+    Import-Module ADDSDeployment    
     Install-ADDSForest `
     -CreateDnsDelegation:$false `
     -DatabasePath "C:\Windows\NTDS" `
@@ -16,17 +22,16 @@ function InstallAD{
     -ForestMode "Win2012R2" `
     -InstallDns:$true `
     -LogPath "C:\Windows\NTDS" `
-    -NoRebootOnCompletion:$true `
+    -NoRebootOnCompletion:$false `
     -SysvolPath: "C:\Windows\SYSVOL" `
     -Force:$true `
-    -SafeModeAdministratorPassword (ConvertTo-SecureString  Admin123 -AsPlainText -Force ) -forestmode "win2012" `
-    -NorebootOnCompletion:$false -InstallDns:$true
+    -SafeModeAdministratorPassword (ConvertTo-SecureString  Admin123 -AsPlainText -Force ) `
 }
 
 #OU
 function CreateOU{
 	
-	Write-Host "Server is getting the ASSENGRAAF OU's "
+	Write-Host "Server is getting the ASSENGRAAF OU's"
     Start-Sleep -s 2
 	
     New-ADOrganizationalUnit -Name AsAfdelingen -Path 'DC=Assengraaf,DC=NL' -Description "Overkoepeldende OU voor het domein Assengraaf.nl" -ProtectedFromAccidentalDeletion $False
@@ -53,7 +58,7 @@ function Add-Users {
 	    $SurName = $User.Surname
 	    $GivenName = $User.GivenName
 	    $SAM = $FirstLetterFirstname + $UserSurname
-	    $Password = ConvertTo-SecureString -AsPlainText $Pass -force
+	    $Password = "User123"
 	    $Department = $User.Department
      
 
@@ -65,8 +70,18 @@ function Add-Users {
       "Financieringen" {$U = "OU = Financieringen, OU=AsAfdelingen, DC=Assengraaf, DC=nl"} 
     }	
     
-        New-ADUser -Name $DisplayName -SamAccountName $SAM -UserPrincipalName $SAM -DisplayName $DisplayName
-        -GivenName $GivenName -SurName $SurName -Path $U -AccountPassword $Password -ChangePasswordAtLogon $true -enable $true -HomeDirectory "\\users\$FullName\HomeDir"
+        New-ADUser -Name $DisplayName `
+        -SamAccountName $SAM `
+        -UserPrincipalName $SAM `
+        -DisplayName $DisplayName `
+        -GivenName $GivenName `
+        -AccountPassword (ConvertTo-SecureString $Password -AsPlainText -Force) `
+        -SurName $SurName `
+        -Path $U `
+        -AccountPassword $Password `
+        -ChangePasswordAtLogon $true `
+        -enable $true `
+        -HomeDirectory "\\users\$FullName\HomeDir"
 
 	Write-Host "User $DisplayName is created"
     Start-Sleep -s 1
